@@ -4,7 +4,7 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-06-24T02:23:40-04:00</updated>
+ <updated>2013-06-24T02:31:26-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
@@ -29,7 +29,7 @@
 &lt;li&gt;HTML injected into a Yii PHP view&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id='static_html_needs_improvement'&gt;Static HTML (needs improvement)&lt;/h2&gt;
+&lt;h2 id='static_html'&gt;Static HTML&lt;/h2&gt;
 
 &lt;p&gt;The Yeoman project is enclosed in a self enclosed directory named &lt;code&gt;app&lt;/code&gt; during development and builds to a &lt;code&gt;dist&lt;/code&gt; directory. All required HTML and CSS files are within the same directory. The Angular framework has a level of abstraction implemented via directives called &lt;code&gt;ng-app&lt;/code&gt;. Each &lt;code&gt;ng-app&lt;/code&gt; contains multiple controllers (via &lt;code&gt;ng-controller&lt;/code&gt;) which are data bound with associated &lt;code&gt;Controller&lt;/code&gt; functions in Javascript. Routing can be implemented at the &lt;code&gt;ng-app&lt;/code&gt; level with URL routes of the &lt;code&gt;#/&amp;lt;route&amp;gt;&lt;/code&gt; pattern being assigned to various subviews by the Angular framework. This provides a nice modulization of Javascript actions and DOM manipulation (something which is particularly annoying otherwise) and also allows for bookmarkable URLs. E.g. the view&lt;/p&gt;
 
@@ -47,7 +47,7 @@ http://&amp;lt;serverroot&amp;gt;/index.php/&amp;lt;controller&amp;gt;/&amp;lt;a
 
 &lt;p&gt;An Angular static HTML in conjuction with Yii simply works using the former URL scheme.&lt;/p&gt;
 
-&lt;h2 id='as_a_yii_view_needs_to_be_improved'&gt;As a Yii View (needs to be improved)&lt;/h2&gt;
+&lt;h2 id='as_a_yii_view'&gt;As a Yii View&lt;/h2&gt;
 
 &lt;p&gt;Yii views are rendered as PHP files. The parser parses any PHP directives in the view files, but only if there are any (smirks). By copying the contents of the Angular app&amp;#8217;s HTML file to a PHP view file, it is simply rendered as HTML. The only problem now is making sure that the script loading tags work as expected. This turns out to be not so simple using just strings. The paths have to be hard-coded because Yii does not allow access to relative paths in sub-directories. Futhermore, the HTML files that make up the modularized views routed by the Angular app via URL routes must also be served as static files.&lt;/p&gt;
 
