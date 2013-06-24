@@ -193,7 +193,21 @@ http://&lt;serverroot&gt;/index.php/&lt;controller&gt;/&lt;action&gt;/</code></p
 
 <p>An Angular static HTML in conjuction with Yii simply works using the former URL scheme.</p>
 
-<h2 id='as_a_yii_view'>As a Yii View</h2>
+<h2 id='as_a_yii_view_needs_to_be_improved'>As a Yii View (needs to be improved)</h2>
+
+<p>Yii views are rendered as PHP files. The parser parses any PHP directives in the view files, but only if there are any (smirks). By copying the contents of the Angular app&#8217;s HTML file to a PHP view file, it is simply rendered as HTML. The only problem now is making sure that the script loading tags work as expected. This turns out to be not so simple using just strings. The paths have to be hard-coded because Yii does not allow access to relative paths in sub-directories. Futhermore, the HTML files that make up the modularized views routed by the Angular app via URL routes must also be served as static files.</p>
+
+<h3 id='implementation'>Implementation</h3>
+
+<p>Currently, the static files are served via hard-coded paths. Once a decision is reached on what pattern of development to follow, the scripts and stylesheets are best served via the Yii assets system. This system takes scripts / stylesheet URLs from a standard directory and serves them via relative paths built during the compile process.</p>
+
+<h3 id='layout_inheritance'>Layout Inheritance</h3>
+
+<p>As of this writing, the Angular app served the Yii view inherits some layout from the default Yii layout whereas some is derived from the HTML app. This results in some disarray in the overall layout. The feed column which is designed to take up about a quarter of the real estate is limited to just enough to hold the placeholder text. Updating the script loading as above and abstracing the common elements to a Yii layout should fix this problem pleasantly based on the decision on what method to use.</p>
+
+<h3 id='trailing_issues'>Trailing Issues</h3>
+
+<p>The only remaining matter is the serving of the static HTML sub-view files. I&#8217;ll need to investigate some more on this. Perhaps Yii offers a way to serve these similar to how scripts are served. In the case where that is not possible, some security review might be undertaken of the situation. It is all just HTML and JS and not data is actually used until the app is running and the server authorizes the data, but you never know.</p>
     
     <hr>
     <div class="pagination btn-group">

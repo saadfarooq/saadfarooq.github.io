@@ -176,6 +176,57 @@
 </ul>
 
 <h2 id='options'>Options</h2>
+
+<ul>
+<li>Using native Angular directives</li>
+
+<li>Using a pre-built Data-grid</li>
+</ul>
+
+<h3 id='native_angular'>Native Angular</h3>
+
+<p>Angular directives give a great way to roll your own table using whatever data-types you prefer. The implementation of the table in the current layout is just the following:</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;table&gt;</span>
+    <span class='nt'>&lt;thead&gt;</span>
+        <span class='nt'>&lt;tr&gt;</span>
+            <span class='nt'>&lt;th</span> <span class='na'>ng-repeat=</span><span class='s'>&quot;header in headers&quot;</span><span class='nt'>&gt;</span>  {{ header }} <span class='nt'>&lt;/th&gt;</span>
+        <span class='nt'>&lt;/tr&gt;</span>
+    <span class='nt'>&lt;/thead&gt;</span>
+    <span class='nt'>&lt;tbody&gt;</span>
+        <span class='nt'>&lt;tr</span> <span class='na'>ng-repeat=</span><span class='s'>&quot;value in values | filter:filterBy&quot;</span><span class='nt'>&gt;</span>
+            <span class='nt'>&lt;td&gt;</span>  {{ value.Title }}        <span class='nt'>&lt;/td&gt;</span>
+            <span class='nt'>&lt;td&gt;</span>  {{ value.Description }}  <span class='nt'>&lt;/td&gt;</span>
+            <span class='nt'>&lt;td&gt;</span>  {{ value.Date }}         <span class='nt'>&lt;/td&gt;</span>
+            <span class='nt'>&lt;td&gt;</span>  {{ value.Password }}     <span class='nt'>&lt;/td&gt;</span>
+        <span class='nt'>&lt;/tr&gt;</span>
+    <span class='nt'>&lt;/tbody&gt;</span>
+<span class='nt'>&lt;/table&gt;</span>
+</code></pre></div>
+<p>But where does the data come from. Well, in the controller you just use Angular&#8217;s <code>$http</code> service to make a web call and set the returned value to a variable on the scope. The data-binding guarantees that the data shows up on the same variable in the HTML.</p>
+<div class='highlight'><pre><code class='js'><span class='nx'>$http</span><span class='p'>({</span><span class='nx'>method</span><span class='o'>:</span> <span class='s1'>&#39;GET&#39;</span><span class='p'>,</span> <span class='nx'>url</span><span class='o'>:</span> <span class='s1'>&#39;http://someserver&#39;</span><span class='p'>}).</span>
+    <span class='nx'>success</span><span class='p'>(</span><span class='kd'>function</span><span class='p'>(</span><span class='nx'>data</span><span class='p'>,</span> <span class='nx'>status</span><span class='p'>,</span> <span class='nx'>headers</span><span class='p'>,</span> <span class='nx'>config</span><span class='p'>)</span> <span class='p'>{</span>
+        <span class='nx'>$scope</span><span class='p'>.</span><span class='nx'>headers</span> <span class='o'>=</span> <span class='nb'>Object</span><span class='p'>.</span><span class='nx'>keys</span><span class='p'>(</span><span class='nx'>data</span><span class='p'>[</span><span class='mi'>0</span><span class='p'>]);</span> <span class='c1'>// get the headers from one row</span>
+        <span class='nx'>$scope</span><span class='p'>.</span><span class='nx'>values</span>  <span class='o'>=</span> <span class='nx'>data</span><span class='p'>;</span>
+    <span class='p'>});</span>
+</code></pre></div>
+<p>And voila, the data fills up the table. Also, notice the filter &#8220;piped&#8221; after the <code>ng-repeat</code> directive. By simply adding:</p>
+<div class='highlight'><pre><code class='html'><span class='nt'>&lt;input</span> <span class='na'>ng-model=</span><span class='s'>&quot;filterBy&quot;</span><span class='nt'>&gt;&lt;/input&gt;</span>
+</code></pre></div>
+<p>to the page, the table is filtered by the values containing the string from input. No other code necessary. Isn&#8217;t that cool&#8230;</p>
+
+<p>Of course, we can also write other filters. In our application, filtering is a great tool because of the large lists we have. That coupled with the fact that I&#8217;ve never liked the look of data-grid (they seem too&#8230; serious) so this option is definitely my favorite.</p>
+
+<h3 id='using_a_prebuilt_datagrid'>Using a Pre-Built Data-grid</h3>
+
+<p>In this case, there are plenty of options to choose from. I couldn&#8217;t get the ones I tried to work out of the box and it turned out it might have to do with setting some data before the HTTP call is made and then updating the data instead of setting it just on the success callback (now called promise).</p>
+
+<p>Eventually, the one I&#8217;m using is called <a href='http://angular-ui.github.io/ng-grid/'>ng-grid</a>. The only problem you need to be aware of with this (apart from the setting data as above) is that initially it might only show a couple rows of data. Turns out it&#8217;s a bug in Javascript. There is a workaround suggested <a href='https://github.com/angular-ui/ng-grid/issues/80'>here</a> to make sure it uses <code>auto</code> height until the bug is fixed but it didn&#8217;t work for me so I had to set the height manually.</p>
+
+<p>Others that might be of interest are : <a href='http://lorenzofox3.github.io/smart-table-website/'>Smart Table</a> and <a href='http://angulartable.com/'>Angular Table</a>. Angular Table claims to be completely declarative which is cool. Unfortunately, I couldn&#8217;t get it to work right in the limited time I had. Might have to give it another try soon.</p>
+
+<h2 id='conclusion'>Conclusion</h2>
+
+<p>I&#8217;d love to just go with the native Angular table but I realize that might be too geeky overall. Will have to see what the group decides. Might just end up doing it with Yii in the end.</p>
     
     <hr>
     <div class="pagination btn-group">

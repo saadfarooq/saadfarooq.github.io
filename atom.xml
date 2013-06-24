@@ -4,7 +4,7 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-06-24T00:06:00-04:00</updated>
+ <updated>2013-06-24T02:23:40-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
@@ -47,7 +47,21 @@ http://&amp;lt;serverroot&amp;gt;/index.php/&amp;lt;controller&amp;gt;/&amp;lt;a
 
 &lt;p&gt;An Angular static HTML in conjuction with Yii simply works using the former URL scheme.&lt;/p&gt;
 
-&lt;h2 id='as_a_yii_view'&gt;As a Yii View&lt;/h2&gt;</content>
+&lt;h2 id='as_a_yii_view_needs_to_be_improved'&gt;As a Yii View (needs to be improved)&lt;/h2&gt;
+
+&lt;p&gt;Yii views are rendered as PHP files. The parser parses any PHP directives in the view files, but only if there are any (smirks). By copying the contents of the Angular app&amp;#8217;s HTML file to a PHP view file, it is simply rendered as HTML. The only problem now is making sure that the script loading tags work as expected. This turns out to be not so simple using just strings. The paths have to be hard-coded because Yii does not allow access to relative paths in sub-directories. Futhermore, the HTML files that make up the modularized views routed by the Angular app via URL routes must also be served as static files.&lt;/p&gt;
+
+&lt;h3 id='implementation'&gt;Implementation&lt;/h3&gt;
+
+&lt;p&gt;Currently, the static files are served via hard-coded paths. Once a decision is reached on what pattern of development to follow, the scripts and stylesheets are best served via the Yii assets system. This system takes scripts / stylesheet URLs from a standard directory and serves them via relative paths built during the compile process.&lt;/p&gt;
+
+&lt;h3 id='layout_inheritance'&gt;Layout Inheritance&lt;/h3&gt;
+
+&lt;p&gt;As of this writing, the Angular app served the Yii view inherits some layout from the default Yii layout whereas some is derived from the HTML app. This results in some disarray in the overall layout. The feed column which is designed to take up about a quarter of the real estate is limited to just enough to hold the placeholder text. Updating the script loading as above and abstracing the common elements to a Yii layout should fix this problem pleasantly based on the decision on what method to use.&lt;/p&gt;
+
+&lt;h3 id='trailing_issues'&gt;Trailing Issues&lt;/h3&gt;
+
+&lt;p&gt;The only remaining matter is the serving of the static HTML sub-view files. I&amp;#8217;ll need to investigate some more on this. Perhaps Yii offers a way to serve these similar to how scripts are served. In the case where that is not possible, some security review might be undertaken of the situation. It is all just HTML and JS and not data is actually used until the app is running and the server authorizes the data, but you never know.&lt;/p&gt;</content>
  </entry>
  
  <entry>
@@ -67,7 +81,58 @@ http://&amp;lt;serverroot&amp;gt;/index.php/&amp;lt;controller&amp;gt;/&amp;lt;a
 &lt;li&gt;Easy to manipulate - similar to flexible above, some of the problems with the Yii plugin we previously used is it was too rigid. You could only used the options that they already have built-in and it&amp;#8217;s not very declarative.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id='options'&gt;Options&lt;/h2&gt;</content>
+&lt;h2 id='options'&gt;Options&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Using native Angular directives&lt;/li&gt;
+
+&lt;li&gt;Using a pre-built Data-grid&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='native_angular'&gt;Native Angular&lt;/h3&gt;
+
+&lt;p&gt;Angular directives give a great way to roll your own table using whatever data-types you prefer. The implementation of the table in the current layout is just the following:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;&lt;span class='nt'&gt;&amp;lt;table&amp;gt;&lt;/span&gt;
+    &lt;span class='nt'&gt;&amp;lt;thead&amp;gt;&lt;/span&gt;
+        &lt;span class='nt'&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;
+            &lt;span class='nt'&gt;&amp;lt;th&lt;/span&gt; &lt;span class='na'&gt;ng-repeat=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;header in headers&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;  {{ header }} &lt;span class='nt'&gt;&amp;lt;/th&amp;gt;&lt;/span&gt;
+        &lt;span class='nt'&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+    &lt;span class='nt'&gt;&amp;lt;/thead&amp;gt;&lt;/span&gt;
+    &lt;span class='nt'&gt;&amp;lt;tbody&amp;gt;&lt;/span&gt;
+        &lt;span class='nt'&gt;&amp;lt;tr&lt;/span&gt; &lt;span class='na'&gt;ng-repeat=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;value in values | filter:filterBy&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class='nt'&gt;&amp;lt;td&amp;gt;&lt;/span&gt;  {{ value.Title }}        &lt;span class='nt'&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+            &lt;span class='nt'&gt;&amp;lt;td&amp;gt;&lt;/span&gt;  {{ value.Description }}  &lt;span class='nt'&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+            &lt;span class='nt'&gt;&amp;lt;td&amp;gt;&lt;/span&gt;  {{ value.Date }}         &lt;span class='nt'&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+            &lt;span class='nt'&gt;&amp;lt;td&amp;gt;&lt;/span&gt;  {{ value.Password }}     &lt;span class='nt'&gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+        &lt;span class='nt'&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+    &lt;span class='nt'&gt;&amp;lt;/tbody&amp;gt;&lt;/span&gt;
+&lt;span class='nt'&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But where does the data come from. Well, in the controller you just use Angular&amp;#8217;s &lt;code&gt;$http&lt;/code&gt; service to make a web call and set the returned value to a variable on the scope. The data-binding guarantees that the data shows up on the same variable in the HTML.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='js'&gt;&lt;span class='nx'&gt;$http&lt;/span&gt;&lt;span class='p'&gt;({&lt;/span&gt;&lt;span class='nx'&gt;method&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;GET&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;url&lt;/span&gt;&lt;span class='o'&gt;:&lt;/span&gt; &lt;span class='s1'&gt;&amp;#39;http://someserver&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;}).&lt;/span&gt;
+    &lt;span class='nx'&gt;success&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='kd'&gt;function&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;data&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;status&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;headers&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='nx'&gt;config&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='p'&gt;{&lt;/span&gt;
+        &lt;span class='nx'&gt;$scope&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;headers&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;Object&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;keys&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='nx'&gt;data&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;]);&lt;/span&gt; &lt;span class='c1'&gt;// get the headers from one row&lt;/span&gt;
+        &lt;span class='nx'&gt;$scope&lt;/span&gt;&lt;span class='p'&gt;.&lt;/span&gt;&lt;span class='nx'&gt;values&lt;/span&gt;  &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nx'&gt;data&lt;/span&gt;&lt;span class='p'&gt;;&lt;/span&gt;
+    &lt;span class='p'&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And voila, the data fills up the table. Also, notice the filter &amp;#8220;piped&amp;#8221; after the &lt;code&gt;ng-repeat&lt;/code&gt; directive. By simply adding:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;&lt;span class='nt'&gt;&amp;lt;input&lt;/span&gt; &lt;span class='na'&gt;ng-model=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;filterBy&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&amp;lt;/input&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;to the page, the table is filtered by the values containing the string from input. No other code necessary. Isn&amp;#8217;t that cool&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Of course, we can also write other filters. In our application, filtering is a great tool because of the large lists we have. That coupled with the fact that I&amp;#8217;ve never liked the look of data-grid (they seem too&amp;#8230; serious) so this option is definitely my favorite.&lt;/p&gt;
+
+&lt;h3 id='using_a_prebuilt_datagrid'&gt;Using a Pre-Built Data-grid&lt;/h3&gt;
+
+&lt;p&gt;In this case, there are plenty of options to choose from. I couldn&amp;#8217;t get the ones I tried to work out of the box and it turned out it might have to do with setting some data before the HTTP call is made and then updating the data instead of setting it just on the success callback (now called promise).&lt;/p&gt;
+
+&lt;p&gt;Eventually, the one I&amp;#8217;m using is called &lt;a href='http://angular-ui.github.io/ng-grid/'&gt;ng-grid&lt;/a&gt;. The only problem you need to be aware of with this (apart from the setting data as above) is that initially it might only show a couple rows of data. Turns out it&amp;#8217;s a bug in Javascript. There is a workaround suggested &lt;a href='https://github.com/angular-ui/ng-grid/issues/80'&gt;here&lt;/a&gt; to make sure it uses &lt;code&gt;auto&lt;/code&gt; height until the bug is fixed but it didn&amp;#8217;t work for me so I had to set the height manually.&lt;/p&gt;
+
+&lt;p&gt;Others that might be of interest are : &lt;a href='http://lorenzofox3.github.io/smart-table-website/'&gt;Smart Table&lt;/a&gt; and &lt;a href='http://angulartable.com/'&gt;Angular Table&lt;/a&gt;. Angular Table claims to be completely declarative which is cool. Unfortunately, I couldn&amp;#8217;t get it to work right in the limited time I had. Might have to give it another try soon.&lt;/p&gt;
+
+&lt;h2 id='conclusion'&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#8217;d love to just go with the native Angular table but I realize that might be too geeky overall. Will have to see what the group decides. Might just end up doing it with Yii in the end.&lt;/p&gt;</content>
  </entry>
  
  <entry>
