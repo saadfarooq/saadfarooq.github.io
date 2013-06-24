@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link href="/assets/mdpress/css/reset.css" rel="stylesheet" />
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="/assets/mdpress/css/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/mdpress/css/apple-touch-icon.png" />
+    <!-- Code Prettifier: -->
+<link href="/assets/mdpress/css/highlight.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/assets/mdpress/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- 
+
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}});
+        </script>
+        <script type="text/javascript"
+          src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+       
+-->
+    <link href="/assets/mdpress/css/style.css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+  <div class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+    <div id="impress">
+    <div class='step' >
+    
+<h2>How to make the Linux terminal call you Daddy! (or Mommy):</h2>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/170px-Tux.svg.png" alt="linux"></p>
+</div>
+      <div class='step' >
+    
+<h2>Disclaimer</h2>
+
+<ul>
+<li>Hazardous amounts of geekness ahead</li>
+<li>Prone to anti-&quot;stuff&quot; rants</li>
+<li>Filter according to needs</li>
+<li>More or less second nature so presumptious attitude</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Prelude for Windows Users</h2>
+
+<ul>
+<li>Cygwin can be used to have a &quot;virtual&quot; linux shell environment</li>
+<li>VirtuaWin sets up desktop workspace well</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Structure</h2>
+
+<ul>
+<li>Basic OS / File system</li>
+<li>Shell commands</li>
+<li>Scripting / automation</li>
+<li>Tips and Tricks</li>
+</ul>
+
+<p><strong>Stop me an any time</strong></p>
+</div>
+      <div class='step' >
+    
+<h1>Basic OS / File system</h1>
+</div>
+      <div class='step' >
+    
+<h2>Linux</h2>
+
+<ul>
+<li>Unix-compatible free OS</li>
+<li>Kernel is the basic OS component</li>
+<li>A &quot;shell&quot; provides an interface to access services of a kernel.
+<code class='inline prettyprint'>http://en.wikipedia.org/wiki/Shell_(computing)</code></li>
+</ul>
+
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/8/8f/Kernel_Layout.svg" alt="kernel"></p>
+</div>
+      <div class='step' >
+    
+<h2>File System Dictory Structure</h2>
+
+<ul>
+<li>Important concept: EVERYTHING IS A FILE
+<a href="https://help.ubuntu.com/10.04/installation-guide/i386/directory-tree.html">https://help.ubuntu.com/10.04/installation-guide/i386/directory-tree.html</a></li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Home Directory</h2>
+
+<ul>
+<li>Has user files</li>
+<li>Setting in user directory is usually in &quot;dotfiles&quot;</li>
+<li>Abbreviated with ~ (tilde)</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>SHELL COMMANDS</h1>
+
+<h1>(we use &#39;bash&#39;)</h1>
+</div>
+      <div class='step' >
+    
+<h2>File System Navigation</h2>
+
+<ul>
+<li><code class='inline prettyprint'>mkdir</code></li>
+<li><code class='inline prettyprint'>cd</code></li>
+<li><code class='inline prettyprint'>ls</code> </li>
+<li><code class='inline prettyprint'>rm</code></li>
+<li><code class='inline prettyprint'>./</code> - execute something in current directory</li>
+</ul>
+
+<p><strong>NOTE:</strong> General rule - <code class='inline prettyprint'>--help</code> <code class='inline prettyprint'>--version</code> usually work with </p>
+</div>
+      <div class='step' >
+    
+<h2>Permissions</h2>
+
+<ul>
+<li>Two levels of permissions
+
+<ul>
+<li>Owner</li>
+<li>Group</li>
+</ul></li>
+<li><code class='inline prettyprint'>chown</code>, <code class='inline prettyprint'>chgrp</code>, <code class='inline prettyprint'>chmod</code></li>
+<li>Permission are a 9-bit array</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Environment</h2>
+
+<ul>
+<li><code class='inline prettyprint'>env</code> - show current environment</li>
+<li><code class='inline prettyprint'>echo</code> - output a variable</li>
+<li><code class='inline prettyprint'>eval</code> - execute a variable</li>
+<li><code class='inline prettyprint'>PATH</code> - important environment variable</li>
+<li><code class='inline prettyprint'>which</code> - where a file in path is</li>
+<li><code class='inline prettyprint'>cat</code> - view a file</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Personalizing (non-extreme)</h2>
+
+<ul>
+<li><code class='inline prettyprint'>alias</code> - make your own shorthand</li>
+<li><code class='inline prettyprint'>.bashrc</code> - customize your bash startup</li>
+<li><code class='inline prettyprint'>ln -s</code> - make symboic links to commonly used items</li>
+<li><code class='inline prettyprint'>man</code> - useful for help (before the internet I guess)</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Piping</h2>
+
+<ul>
+<li><code class='inline prettyprint'>|</code> - pipe the output of one program to the other</li>
+<li><code class='inline prettyprint'>grep</code> - commonly used for filtering</li>
+<li><code class='inline prettyprint'>more</code> or <code class='inline prettyprint'>less</code> - if info more than one screen</li>
+<li><code class='inline prettyprint'>></code> - direct output to a file</li>
+</ul>
+
+<p><a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html">http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html</a></p>
+</div>
+      <div class='step' >
+    
+<h1>Scripting / Automation</h1>
+</div>
+      <div class='step' >
+    
+<h2>Scripting / Automation</h2>
+
+<ul>
+<li>The shell has a built-in language</li>
+<li><code class='inline prettyprint'>test</code> or <code class='inline prettyprint'>[[ ]]</code> - test for stuff</li>
+<li><code class='inline prettyprint'>for</code> - for loop</li>
+<li><code class='inline prettyprint'>while</code> - while loop</li>
+<li><code class='inline prettyprint'>&&</code> or <code class='inline prettyprint'>||</code> - ands and ors</li>
+<li><code class='inline prettyprint'>#!</code> - hashbang or shebang defines the exectuable script</li>
+<li><code class='inline prettyprint'>source</code> - uses default shell (slightly different from ./)</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>Tips and Tricks</h1>
+</div>
+      <div class='step' >
+    
+<h2>SSH</h2>
+
+<ul>
+<li>Get rid of those damn passwords</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Be cool</h2>
+
+<ul>
+<li><code class='inline prettyprint'>autojump</code> - navigate faster
+<a href="https://github.com/joelthelion/autojump">https://github.com/joelthelion/autojump</a></li>
+<li><code class='inline prettyprint'>c</code> - cat with color (Actually python-pygments package)</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Auto-check and deploy</h2>
+
+<ul>
+<li><code class='inline prettyprint'>git</code> scripting - do something when a push happens</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Be Warned</h2>
+
+<p>A guy once told me, &quot;Do not have any attachments, do not have anything in your life you are not willing to walk out on in 30 seconds flat if you spot the heat around the corner.&quot;</p>
+
+<p>-- HEAT</p>
+</div>
+      <div class='step' >
+    
+<h2>Be cooler</h2>
+
+<ul>
+<li>Get dotfiles
+<a href="http://dotfiles.github.io/">http://dotfiles.github.io/</a></li>
+<li>Be a man - go for zsh</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Development</h2>
+
+<ul>
+<li>Sublime Text 2 is pretty cool</li>
+<li>&#39;emacs is a great OS but it lacks a good editor&#39;</li>
+<li>Use an IDE </li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Stuff I Missed</h2>
+
+<ul>
+<li>When an application is run in <code class='inline prettyprint'>bash</code>, it makes <code class='inline prettyprint'>bash</code> busy</li>
+<li>To make the app run in background, either :
+
+<ul>
+<li>Add an ampersand to the command like &#39;subl &amp;&#39; to make hte app start in background</li>
+<li>Press <code class='inline prettyprint'>Ctrl + Z</code> at the busy command line and the app will be sent to background</li>
+</ul></li>
+<li><code class='inline prettyprint'>jobs</code> - shows which jobs are running</li>
+<li><code class='inline prettyprint'>fg</code> - brings the job to foreground again (add a job number if there are more than one)</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h2>Time Management Tips</h2>
+
+<p><a href="http://www.youtube.com/watch?v=oTugjssqOT0">Link to video</a></p>
+
+<ul>
+<li>Listen to Randy Pausch, have two monitors </li>
+<li>Use RescueTime.com to find out where your time went</li>
+</ul>
+</div>
+      <div class='step' >
+    
+<h1>Questions</h1>
+
+      </div>
+    <script src="/assets/mdpress/js/impress.js"></script>
+    <script>impress().init();</script>
+  </body>
+</html>
+    

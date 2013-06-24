@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Saad's Blog</title>
+ <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
+ <link href="http://sfarooq.github.com"/>
+ <updated>2013-06-24T00:06:00-04:00</updated>
+ <id>http://sfarooq.github.com</id>
+ <author>
+   <name>Saad Farooq</name>
+   <email>sa@dfarooq.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Integrating Yeoman based Project with Yii</title>
+   <link href="http://sfarooq.github.com/development/2013/06/23/integrating-yeoman-create-project-with-yii"/>
+   <updated>2013-06-23T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/23/integrating-yeoman-create-project-with-yii</id>
+   <content type="html">&lt;h2 id='options'&gt;Options&lt;/h2&gt;
+
+&lt;p&gt;The Yeoman based Angular project builds to HTML and Javascript.&lt;/p&gt;
+
+&lt;p&gt;There are two main options for integrating with Yii.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Static HTML served directly from a directory&lt;/li&gt;
+
+&lt;li&gt;HTML injected into a Yii PHP view&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='static_html_needs_improvement'&gt;Static HTML (needs improvement)&lt;/h2&gt;
+
+&lt;p&gt;The Yeoman project is enclosed in a self enclosed directory named &lt;code&gt;app&lt;/code&gt; during development and builds to a &lt;code&gt;dist&lt;/code&gt; directory. All required HTML and CSS files are within the same directory. The Angular framework has a level of abstraction implemented via directives called &lt;code&gt;ng-app&lt;/code&gt;. Each &lt;code&gt;ng-app&lt;/code&gt; contains multiple controllers (via &lt;code&gt;ng-controller&lt;/code&gt;) which are data bound with associated &lt;code&gt;Controller&lt;/code&gt; functions in Javascript. Routing can be implemented at the &lt;code&gt;ng-app&lt;/code&gt; level with URL routes of the &lt;code&gt;#/&amp;lt;route&amp;gt;&lt;/code&gt; pattern being assigned to various subviews by the Angular framework. This provides a nice modulization of Javascript actions and DOM manipulation (something which is particularly annoying otherwise) and also allows for bookmarkable URLs. E.g. the view&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://localhost/#/firstview
+http://localhost/#/secondview&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;can be implemented using different HTML files via the Angular routing mechanism. And be assigned to different &lt;code&gt;ng-controllers&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id='implementation'&gt;Implementation&lt;/h3&gt;
+
+&lt;p&gt;The implementation in conjunction with Yii turns out to be simple. Copying the &lt;code&gt;app&lt;/code&gt; (or &lt;code&gt;dist&lt;/code&gt;) folder to the root of the Yii server creates the URL which simply loads the static HTML app. No problems at all. The Yii framework in the default configuration only routes the URL portion beyond the &lt;code&gt;/index.php/&lt;/code&gt; to a Yii controller. Following are the two URL patterns.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://&amp;lt;serverroot&amp;gt;/&amp;lt;angular-app-directory&amp;gt;/
+http://&amp;lt;serverroot&amp;gt;/index.php/&amp;lt;controller&amp;gt;/&amp;lt;action&amp;gt;/&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;An Angular static HTML in conjuction with Yii simply works using the former URL scheme.&lt;/p&gt;
+
+&lt;h2 id='as_a_yii_view'&gt;As a Yii View&lt;/h2&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Data Grids with AngularJS</title>
+   <link href="http://sfarooq.github.com/development/2013/06/23/data-grids-with-angularjs"/>
+   <updated>2013-06-23T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/23/data-grids-with-angularjs</id>
+   <content type="html">&lt;h2 id='criteria'&gt;Criteria&lt;/h2&gt;
+
+&lt;p&gt;As always, lets start with we want in our data grids.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Frontend (JS) driven - with all the tweaking that is expected of tables / grids, working from JS is just simpler instead of doing some processing in one language and some in another. I&amp;#8217;ve run into problems using multiple languages previously where SQL was not flexible enough to do good processing of data. I then had to do some processing in a server side language (PHP) and some in the frontend using Javascript. This approach is way easier, just get the raw unformatted data from SQL and do everything in Javascript.&lt;/li&gt;
+
+&lt;li&gt;Flexible - there is a tradeoff here. On the one hand, it would be good to have control over individual columns. On the other, it might be convenient to just give a widget data and have it show up.&lt;/li&gt;
+
+&lt;li&gt;Easy to manipulate - similar to flexible above, some of the problems with the Yii plugin we previously used is it was too rigid. You could only used the options that they already have built-in and it&amp;#8217;s not very declarative.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='options'&gt;Options&lt;/h2&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>In Search of a Front End Development Framework</title>
+   <link href="http://sfarooq.github.com/development/2013/06/16/in-search-of-a-front-end-development-framework"/>
+   <updated>2013-06-16T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/16/in-search-of-a-front-end-development-framework</id>
+   <content type="html">&lt;h1 id='frontend_development_framework'&gt;Front-end Development Framework&lt;/h1&gt;
+
+&lt;p&gt;As bad as it is, Javascript is here to stay and server side development still doesn&amp;#8217;t help get rid of it (and introduces plenty of problems of it&amp;#8217;s own). So if we&amp;#8217;re in this mess, might as well try to make it a little less gross. Many have tried (and continue to try) to make web app development less painful. We&amp;#8217;re giving one of our projects a makeover so I though I might as well try to find a new framework that works better than our current setup (PHP Yii, arghh).&lt;/p&gt;
+
+&lt;h2 id='criteria'&gt;Criteria&lt;/h2&gt;
+
+&lt;p&gt;The main criteria that I want in the new framework:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Decoupling Server and Client - the framework should be frontend driven i.e. the front end is a Javascript based client app and the backend is comprised of RESTFul web services. The separation gives us some separation of concerns and makes extending the platform to use mobile based clients easier.&lt;/li&gt;
+
+&lt;li&gt;Support for testing - I suck at testing. I write stuff and assume it&amp;#8217;s true for the completely plausible reason that I wrote it. I was introduced to the &lt;code&gt;Test Driven Development&lt;/code&gt; philosophy recently and I totally buy into it. So I would like to have support for testing in the framework.&lt;/li&gt;
+
+&lt;li&gt;Support for modularization - I don&amp;#8217;t think I can get this is Javascript. In fact, this should be on the list. It should be a given but since we are working with Javascript, this will probably only remain on the list and never see fruition.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apart from that, I wouldn&amp;#8217;t mind these features:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Package Management&lt;/li&gt;
+
+&lt;li&gt;Dependency Management&lt;/li&gt;
+
+&lt;li&gt;Scaffolding&lt;/li&gt;
+
+&lt;li&gt;Bootstrapping that&amp;#8217;s close to what I&amp;#8217;m looking for&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='introducing_yeoman'&gt;Introducing Yeoman&lt;/h2&gt;
+
+&lt;p&gt;I went over a lot of stuff over the past few days and &lt;a href='http://www.yeoman.io'&gt;Yeoman&lt;/a&gt; seems to be the way to go. The &lt;code&gt;1.0&lt;/code&gt; version of Yeoman aims at bringing existing tools together instead of trying to do everything itself. It seems to try to mimic a &lt;code&gt;Rails&lt;/code&gt; type system. &lt;code&gt;Grunt&lt;/code&gt; is the build tool and &lt;code&gt;Bower&lt;/code&gt; is the package/dependency manager.&lt;/p&gt;
+
+&lt;p&gt;Yoeman includes a tool called &lt;code&gt;Yo&lt;/code&gt;. It also has a variety of generators that can be used to scaffold apps. They seem to work pretty great out of the box.&lt;/p&gt;
+
+&lt;h2 id='current_status'&gt;Current Status&lt;/h2&gt;
+
+&lt;p&gt;The generators I&amp;#8217;m currently exploring are &lt;code&gt;generator-webapp&lt;/code&gt; and &lt;code&gt;generator-angular&lt;/code&gt;. The testing framework for the &lt;code&gt;webapp&lt;/code&gt; generator is &lt;a href='http://visionmedia.github.io/mocha/'&gt;Mocha&lt;/a&gt; and it uses &lt;a href='http://chaijs.com/'&gt;ChaiJS&lt;/a&gt; and &lt;a href='https://github.com/LearnBoost/expect.js/'&gt;ExpectJS&lt;/a&gt; for assertion (I don&amp;#8217;t know why, it&amp;#8217;s kinda weird). The &lt;a href='http://angularjs.org/'&gt;AngularJS&lt;/a&gt; generator uses &lt;a href='http://karma-runner.github.io/0.8/index.html'&gt;Karma&lt;/a&gt; as their testing framework.&lt;/p&gt;
+
+&lt;h2 id='what_now_'&gt;What now ?&lt;/h2&gt;
+
+&lt;p&gt;I haven&amp;#8217;t tested the two options enough yet, but I feel like Angular has more momentum and it&amp;#8217;s easier to get starting using TDD with Angular just because they have more documentation available. I tried Mocha + Chai + Expect but kept getting lost with who&amp;#8217;s doing what so it&amp;#8217;s higly probably that I&amp;#8217;m gonna go with Angular via Yeoman.&lt;/p&gt;
+
+&lt;h2 id='extras'&gt;Extras&lt;/h2&gt;
+
+&lt;p&gt;Below is a video on getting starting the Yeoman by Addy Osmani from Google.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Research Proposal I</title>
+   <link href="http://sfarooq.github.com/research/2013/06/12/research-proposal-i"/>
+   <updated>2013-06-12T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/06/12/research-proposal-i</id>
+   <content type="html">&lt;h1 id='research_study_proposal__fall_2013'&gt;Research Study Proposal - Fall 2013&lt;/h1&gt;
+
+&lt;p&gt;This document aims to formulate a research study proposal related to research in the area of computer science education. The basic idea is to introduce computer science principles, particularly those related to programming; and especially functional programming, to students in K-12 by using mathematics as a lauchpad for their foray into computer science.&lt;/p&gt;
+
+&lt;p&gt;The proposal bases itself on a number of reasonable assumptions that are influence by discussions and things picked up here andt here . However, the absense of citations for these is obvious at this point and will hopefully be filled in over time via references to previous (or our own) research backing those claims.&lt;/p&gt;
+
+&lt;p&gt;The research evolves into two distinct research questions :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Can student work to understand the complex concepts of mathematics be leveraged to cause a &amp;#8216;transfer of training effect&amp;#8217; towards computer science (and vice versa) ?&lt;/li&gt;
+
+&lt;li&gt;Can notation be used as a &amp;#8216;tool of thought&amp;#8217; to ease the transfer of concepts from mathematics to functional programming ?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I will elaborate on each of these in turn.&lt;/p&gt;
+
+&lt;h2 id='functional_math'&gt;Functional Math&lt;/h2&gt;
+
+&lt;p&gt;Functional programming derives heavily from lambda calculus; a form of calculus that was conceived long before computers were the norm, for expressing mathematical computation. The influence of lambda calculus on functional programming gives it very strong mathematical roots. However, in spite of their obvious overlaps, neither field seems to augment the other in education. Students work their way through hard mathematical concepts and very little of that hard work is carried over to the programming realm &lt;span&gt;citation needed&lt;/span&gt;. The hypothesis that the study would aim to affirm is that both fields are very similar but it is the pedagogical treatment of the concepts that makes the transfer difficult.&lt;/p&gt;
+
+&lt;p&gt;I propose a study that asks people of various age groups what they thought were the hardest concepts were in mathematics and compares it to the same question asked of computer science students with reference to programming. The intuition is that both groups will find the concept of &amp;#8216;function as data&amp;#8217; to be among the hardest concepts. In mathematics, this concept is exhibited by operations such as derivative, summations, transforms, etc.&lt;/p&gt;
+
+&lt;p&gt;The rationale here is that mathematics education does not elaborate the &amp;#8216;function as data&amp;#8217; concept explicitly and by coming up with pedagogical strategies to do so, we can make comp105 much less painful for future students.&lt;/p&gt;
+
+&lt;h3 id='particulars_of_study'&gt;Particulars of Study&lt;/h3&gt;
+
+&lt;p&gt;To be decided.&lt;/p&gt;
+
+&lt;h2 id='notation_as_a_tool_of_thought'&gt;Notation as a Tool of Thought&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href='http://en.wikipedia.org/wiki/Kenneth_E._Iverson'&gt;Kenneth Iverson&lt;/a&gt;&amp;#8217;s work on the use of mathematical notation in computer programming earned him a Turing award and led to the development of the APL programming language. &amp;#8216;Notation as a Tool of Thought&amp;#8217; was the title of his Turing award lecture. As the title suggests, it implies the utility of notation in the thought process. He came up with a notation called a the &amp;#8216;Iverson notation&amp;#8217; which could be used for writing and rationalizing about computer programs without being on a computer and the same notation could be transferred to the computer and just run &lt;span&gt;citation needed&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Notation seems to form another barrier to the &amp;#8216;transfer of training&amp;#8217; from mathematics to computer programming. In computer science courses, students find it hard to translate notational rules into computer programs &lt;span&gt;citation needed&lt;/span&gt; and whereas the Iverson notation gave a way to unite the two worlds, the effect of the differences in notation was never formalized in research &lt;span&gt;citation needed&lt;/span&gt;. Furthermore, the Iverson notation itself is a complex, hard to understand notation that was limited to using symbols that could be made available at the time &lt;span&gt;citation needed, seems a weird claim&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;A more intuitive notation system, coupled with the versatility of input systems today could help in bridging the gap between notational mathematics and computer programming.&lt;/p&gt;
+
+&lt;p&gt;The research study in this case is more an investigative study (would help if I knew more about research methodologies). We go in with no assumptions or hypotheses and give the subjects the task of coming up with concise notations for particular notational scenarios (possibly inspired by the first study above) and look for patterns in the results.&lt;/p&gt;
+
+&lt;h3 id='particulars_of_study'&gt;Particulars of Study&lt;/h3&gt;
+
+&lt;p&gt;To be decided.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Changing Minds by Andrea Di Sessa</title>
+   <link href="http://sfarooq.github.com/reviews/2013/06/12/changing-minds-by-andrea-di-sessa"/>
+   <updated>2013-06-12T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/reviews/2013/06/12/changing-minds-by-andrea-di-sessa</id>
+   <content type="html">&lt;h2 id='introduction'&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;This post is about the significant points and arguments I found in Andrea diSessa&amp;#8217;s book &lt;code&gt;Changing
+Minds&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id='things_for_meeting'&gt;Things for Meeting&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Discuss the comparison of computational literacy hierarchy with other literacy hierarchy&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Computational literacy is unique in that the content created is consumed in a different way i.e. With language literacy:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Literary actions: reading / writing&lt;/li&gt;
+
+&lt;li&gt;Creation action : writing&lt;/li&gt;
+
+&lt;li&gt;Consumption action : reading With computation literacy&lt;/li&gt;
+
+&lt;li&gt;Literary actions: reading / writing code&lt;/li&gt;
+
+&lt;li&gt;Creation: write &amp;#8220;code&amp;#8221;&lt;/li&gt;
+
+&lt;li&gt;Consumption: read &amp;#8220;code&amp;#8221; / consume application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;More like scientific literacy&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Can you pay for my CSTA-13 registration ?&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;The World of Functions as a Function&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Designing event based languages on the argument that they are more intuivitive.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='research_questions'&gt;Research Questions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Is teaching the &amp;#8220;everything is a function philosophy&amp;#8221; worth it ?&lt;/li&gt;
+
+&lt;li&gt;How much harder is it in comparison ?&lt;/li&gt;
+
+&lt;li&gt;Can it be a literacy extendable to arts who don&amp;#8217;t necessarily understand that they are doing math?&lt;/li&gt;
+
+&lt;li&gt;What do kids instinctively know, what can be elaborated on to make it clear and what has to be taught anew ?&lt;/li&gt;
+
+&lt;li&gt;Can this philosophy be compatible with state based computational approaches? for e.g. programming a robot.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='notes'&gt;Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The tick model provides a good analogy to calculus i.e. looking at unit step intervals that make up a larger process (process is not the correct word)&lt;/li&gt;
+
+&lt;li&gt;Lambda calculus provides a better mapping to algebra in my opinion.&lt;/li&gt;
+
+&lt;li&gt;The notational significance of the &lt;em&gt;dx/dy&lt;/em&gt; notation vs Newton&amp;#8217;s notation is emphasized. Seems to the be the most common example.&lt;/li&gt;
+
+&lt;li&gt;Scientific communities are tool-rich cultures. Education does not seem to be.&lt;/li&gt;
+
+&lt;li&gt;Algebra, calculus, tables are representational tools.&lt;/li&gt;
+
+&lt;li&gt;Tools are abandoned as better tools come to forth.&lt;/li&gt;
+
+&lt;li&gt;Tools in schoool tend be an end in thomselves and are related to outcomes like &amp;#8220;doing well in school&amp;#8221;&lt;/li&gt;
+
+&lt;li&gt;Need to understand &lt;em&gt;p-prims&lt;/em&gt; better.&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;Half a literacy is not enough&lt;/em&gt; to be revisited&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='likes'&gt;Likes&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The idea of teachers creating content is great&lt;/li&gt;
+
+&lt;li&gt;&lt;em&gt;p-prim&lt;/em&gt; : &lt;em&gt;phenomenological primitives&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='books_to_read'&gt;Books to Read:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How People Learn&lt;/li&gt;
+
+&lt;li&gt;Turtle Geometry&lt;/li&gt;
+
+&lt;li&gt;Mindstorms&lt;/li&gt;
+
+&lt;li&gt;Windows on Mathematical Learning - Richard Noss and Celia Hoile&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='reading'&gt;Reading:&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Three papers on young people&amp;#8217;s learning&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Starting on Git</title>
+   <link href="http://sfarooq.github.com/development/2013/05/03/starting-on-git"/>
+   <updated>2013-05-03T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/05/03/starting-on-git</id>
+   <content type="html">&lt;h1 id='getting_started_with_git'&gt;Getting started with Git&lt;/h1&gt;
+
+&lt;h2 id='assumptions'&gt;Assumptions&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;You know what version control is&lt;/li&gt;
+
+&lt;li&gt;You know how to install software on whatever platform you are using&lt;/li&gt;
+
+&lt;li&gt;You know how to set PATH environments etc. if you can&amp;#8217;t get &lt;code&gt;git&lt;/code&gt; to respond on your command line&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='where_we_start'&gt;Where we start&lt;/h2&gt;
+
+&lt;p&gt;Go to your console and do the following&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  $ git --version 
+  git version 1.7.9&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you don&amp;#8217;t get that something went wrong and you need to figure out how to get &lt;code&gt;git&lt;/code&gt; on your path.&lt;/p&gt;
+
+&lt;h2 id='initializing_your_repo'&gt;Initializing your repo&lt;/h2&gt;
+
+&lt;p&gt;So a &lt;code&gt;git&lt;/code&gt; repository is basically like a directory that is mirrored somewhere on a server. To initialize a directory as a &lt;code&gt;git&lt;/code&gt; repository, do :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir test 
+$ cd test 
+$ git init 
+Initialized empty Git repository in /home/Saad/workspace/test/.git/&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice the &lt;code&gt;.git&lt;/code&gt; at the end there. That&amp;#8217;s where all the settings are kept. Once you are a master guru of this stuff, you might actually end up editing config files in the directory to change stuff. In the mean time, it is sufficient to know that this is what defines the repository. If you delete this, your repo becomes a normal directory again.&lt;/p&gt;
+
+&lt;h2 id='setting_up_remotes'&gt;Setting up remotes&lt;/h2&gt;
+
+&lt;p&gt;Now that you have a local repository, you may want to connect it to a &amp;#8216;remote&amp;#8217; &lt;code&gt;git&lt;/code&gt; server like &lt;a href='http://www.bitbucket.org'&gt;Bitbucket&lt;/a&gt; or &lt;a href='http://www.github.com'&gt;GitHub&lt;/a&gt;. These are called your &lt;code&gt;remotes&lt;/code&gt; and, understandably, all the manipulation of the remotes is done using the &lt;code&gt;git
+remote&lt;/code&gt; series of commands. Once you make a repo on either Github or Bitbucket, it will have a URL. This will either be in HTTP form (&lt;em&gt;https://&amp;#8230;&lt;/em&gt;) or SSH form (&lt;em&gt;git@github.com:&amp;#8230;&lt;/em&gt;). You can look up how to set up your SSH key on the server if you want to use the SSH form URL. Once you have this URL, from your local &lt;code&gt;git&lt;/code&gt; repo do:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote add origin ssh://git@bitbucket.org/saadfarooq/test.git&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Of course, this should tell you that you can more than one remote to a single repository. It&amp;#8217;s convention to call the remote as &lt;em&gt;origin&lt;/em&gt;. So now your local repository is connected to the remote repository &lt;em&gt;origin&lt;/em&gt;. Good work !&lt;/p&gt;
+
+&lt;h2 id='branches'&gt;Branches&lt;/h2&gt;
+
+&lt;p&gt;The other important concept here is branching. Consider that you and your friend are working on your research project. You friend comes up with this wonderful idea to so something clever but you don&amp;#8217;t quit trust it and don&amp;#8217;t want him to be messing with your code until you are sure that it works (this isn&amp;#8217;t the only possible scenario of course). What do you do ? That&amp;#8217;s where branching comes in. Branching allowing you to take pick up on progress at a particular point and start from that snapshot of code onwards in some other direction. Of course they can be &amp;#8220;merged&amp;#8221; later but we&amp;#8217;ll get to that. All you really need to know about branching at this point is that when you start a repo, it is always on branch &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id='staging_changes'&gt;Staging changes&lt;/h2&gt;
+
+&lt;p&gt;Now for the real stuff. So the reason we have the version control system is to save changes. &lt;code&gt;git&lt;/code&gt; is different from &lt;code&gt;subversion&lt;/code&gt; in that it has two levels of staging i.e. you &amp;#8220;commit&amp;#8221; you changes to the local repository before &amp;#8220;push&amp;#8221;ing them to the remote repo. That is a concept you should grasp well. What this means is that you could have just the local repository and have it track your changes without connecting it to the remote repo at all. The local repository is essentially the same as the remote one, thus making up a &amp;#8220;staging&amp;#8221; area. So, make a change to your local repository. I just make a new file on my linux distro. Then check the status of your repository using the &lt;code&gt;git status&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  $ touch newfile $ git status
+  # On branch master
+  #
+  # Initial commit
+  #
+  # Untracked files:
+  #   (use &amp;quot;git add &amp;lt;file&amp;gt;...&amp;quot; to include in what will be committed)
+  #
+  # newfile nothing added to commit but untracked files present (use &amp;quot;git
+    add&amp;quot; to track)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can see that the file &lt;code&gt;newfile&lt;/code&gt; shows up in &lt;em&gt;Untracked files&lt;/em&gt; (also notice that it is on branch master and it&amp;#8217;s called the &amp;#8220;Initial commit&amp;#8221;). This means that &lt;code&gt;git&lt;/code&gt; will not look for changes in these files and not care about them. &lt;code&gt;git&lt;/code&gt; also tells you how to add them. So :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git add newfile $ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use &amp;quot;git rm --cached &amp;lt;file&amp;gt;...&amp;quot; to unstage)
+#
+# new file:   newfile
+#&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now there are not untracked changes and &lt;code&gt;git&lt;/code&gt; tells you how to unstage the changes you have made. It also defines what kind of changes it is with the &lt;em&gt;&amp;#8220;new file:&amp;#8221;&lt;/em&gt; tag. This could be &lt;em&gt;&amp;#8220;modified&amp;#8221;&lt;/em&gt; if this was not a new file but a modification. Now to the serious stuff.&lt;/p&gt;
+
+&lt;h2 id='committing_changes'&gt;Committing Changes&lt;/h2&gt;
+
+&lt;p&gt;Committing is the mechanism by which you save some changes to the repo. A &amp;#8220;commit&amp;#8221; is essentially a snapshot of the repo at some point in time. You can use these to revert back to a state that you want to be if, for instance, you made a mistake somewhere. Commits are identified in &lt;code&gt;git&lt;/code&gt; by messages and hashes. We have the one change we can commit. So here goes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git commit -m &amp;quot;Initial commit&amp;quot; 
+[master (root-commit) a2cdecf] Initalcommit 
+0 files changed create mode 100644 newfile&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notice I use the &lt;code&gt;-m&lt;/code&gt; argument. This is the commit message (thus the m). If you don&amp;#8217;t provide this argument, &lt;code&gt;git&lt;/code&gt; will open up the default system editor where you can put in the message. Generally, I find it easier to just type it out on the console. You must provide a message. &lt;code&gt;git&lt;/code&gt; aborts the commit if no message if provided. Now your local repo has a commit, if you want to look at the history you can use the &lt;code&gt;git log&lt;/code&gt; command. Now make a change to the file and see what happens when you do &lt;code&gt;git status&lt;/code&gt;. Finally, this is all fine but all this is still on your machine. How can we get this up to the server? That is where the &amp;#8220;push&amp;#8221; command comes.&lt;/p&gt;
+
+&lt;h2 id='pushing_commits'&gt;Pushing commits&lt;/h2&gt;
+
+&lt;p&gt;So this should be easy now. You have already set up a remote server at &lt;em&gt;&amp;#8220;origin&amp;#8221;&lt;/em&gt;. However, you need to link up your local brances with the remote server stuff. Simply use the following command:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push origin master&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;But, you don&amp;#8217;t want to be doing that everytime. You can do something like this for the first commit.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push -u origin --all&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;What this does is, it takes all you local brances and maps them to the same names on the remote &lt;code&gt;git&lt;/code&gt; server at &lt;em&gt;&amp;#8220;origin&amp;#8221;&lt;/em&gt; and also sets the &amp;#8220;upstream&amp;#8221; of you local repo to &lt;em&gt;&amp;#8220;origin&amp;#8221;&lt;/em&gt;. So all you have to do from now onwards is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push 
+Counting objects: 3, done. 
+Writing objects: 100% (3/3), 207 bytes, done. 
+Total 3 (delta 0), reused 0 (delta 0) To ssh://git@bitbucket.org/saadfarooq/test.git
+* [new branch]      master -&amp;gt; master&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And it will know the repo and branch to push your commits to.&lt;/p&gt;
+
+&lt;h2 id='cloning'&gt;Cloning&lt;/h2&gt;
+
+&lt;p&gt;Cloning is a way to get a copy of a remote repo on to your local machine. The command is pretty simple and most sites provide you with the entire command when you go to the repos page.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  $ git clone &amp;lt;repository url&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;When you do a clone, it connects all the local and remote branches automatically. One of the reasons I bring this in late is because that is how I started with &lt;code&gt;git&lt;/code&gt; and I find that you don&amp;#8217;t end up learning enough about the workings of the system if you do it this way and it therefore takes you longer to build expertise with the system.&lt;/p&gt;
+
+&lt;h1 id='coming_soon'&gt;Coming soon&amp;#8230;.&lt;/h1&gt;
+
+&lt;p&gt;We&amp;#8217;ll look at getting other peoples commits from the remote repo on to your local machine so we can start using this for collaborating on code instead of just backing up stuff.&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>

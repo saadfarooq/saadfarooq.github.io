@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        Integrating Yeoman based Project with Yii - 
+      
+      Saad's Blog
+    </title>
+    <meta name="description" content="">
+    <meta name="author" content="Saad Farooq">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <script src="/assets/themes/hooligan/js/jquery.min.js"></script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css" />
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Saad's Blog</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">Pages</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/presentations.html">Presentations</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              <li class="divider-vertical"></li>
+              
+                <li>
+                  <a href="https://www.github.com/sfarooq" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</a>
+                  </a>
+                </li>
+              
+                  
+              
+                <li>
+                  <a href="http://www.twitter.com/unimpeccable" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</a>
+                  </a>
+                </li>
+                                        
+                         
+                                  
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    Integrating Yeoman based Project with Yii 
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <h2 id='options'>Options</h2>
+
+<p>The Yeoman based Angular project builds to HTML and Javascript.</p>
+
+<p>There are two main options for integrating with Yii.</p>
+
+<ul>
+<li>Static HTML served directly from a directory</li>
+
+<li>HTML injected into a Yii PHP view</li>
+</ul>
+
+<h2 id='static_html_needs_improvement'>Static HTML (needs improvement)</h2>
+
+<p>The Yeoman project is enclosed in a self enclosed directory named <code>app</code> during development and builds to a <code>dist</code> directory. All required HTML and CSS files are within the same directory. The Angular framework has a level of abstraction implemented via directives called <code>ng-app</code>. Each <code>ng-app</code> contains multiple controllers (via <code>ng-controller</code>) which are data bound with associated <code>Controller</code> functions in Javascript. Routing can be implemented at the <code>ng-app</code> level with URL routes of the <code>#/&lt;route&gt;</code> pattern being assigned to various subviews by the Angular framework. This provides a nice modulization of Javascript actions and DOM manipulation (something which is particularly annoying otherwise) and also allows for bookmarkable URLs. E.g. the view</p>
+
+<pre><code>http://localhost/#/firstview
+http://localhost/#/secondview</code></pre>
+
+<p>can be implemented using different HTML files via the Angular routing mechanism. And be assigned to different <code>ng-controllers</code>.</p>
+
+<h3 id='implementation'>Implementation</h3>
+
+<p>The implementation in conjunction with Yii turns out to be simple. Copying the <code>app</code> (or <code>dist</code>) folder to the root of the Yii server creates the URL which simply loads the static HTML app. No problems at all. The Yii framework in the default configuration only routes the URL portion beyond the <code>/index.php/</code> to a Yii controller. Following are the two URL patterns.</p>
+
+<pre><code>http://&lt;serverroot&gt;/&lt;angular-app-directory&gt;/
+http://&lt;serverroot&gt;/index.php/&lt;controller&gt;/&lt;action&gt;/</code></pre>
+
+<p>An Angular static HTML in conjuction with Yii simply works using the former URL scheme.</p>
+
+<h2 id='as_a_yii_view'>As a Yii View</h2>
+    
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/development/2013/06/23/data-grids-with-angularjs" title="Data Grids with AngularJS">&larr; Previous</a>
+      
+        <a class="btn" href="/archive.html">Archive</a>
+      
+        <a class="btn next disabled">Next &rarr;</a>
+      
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'saadfarooq'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>Published</h4>
+      <div class="date"><span>23 June 2013</span></div>
+    </section>
+    
+      <section>
+        <h4>Category</h4>
+        <span class="category">
+          development
+        </span>
+      </section>
+         
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#development-ref">development <span>4</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+    
+      <h4>Related Posts</h4>
+      
+        <a href="/development/2013/05/03/starting-on-git">Starting on Git</a><br />
+      
+        <a href="/reviews/2013/06/12/changing-minds-by-andrea-di-sessa">Changing Minds by Andrea Di Sessa</a><br />
+      
+        <a href="/research/2013/06/12/research-proposal-i">Research Proposal I</a><br />
+      
+        <a href="/development/2013/06/16/in-search-of-a-front-end-development-framework">In Search of a Front End Development Framework</a><br />
+      
+        <a href="/development/2013/06/23/data-grids-with-angularjs">Data Grids with AngularJS</a><br />
+      
+             
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Saad Farooq 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+    
+  </body>
+</html>
+
