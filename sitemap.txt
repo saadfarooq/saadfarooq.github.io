@@ -10,6 +10,11 @@ http://sfarooq.github.com/presentations/linux-and-terminal.html
 http://sfarooq.github.com/presentations.html
 http://sfarooq.github.com/index.html
 
+http://sfarooq.github.com/development/2013/06/27/imagethumbnail-gallery-with-angularjs
+http://sfarooq.github.com/development/2013/06/26/server-side-pagination-with-ngtable
+http://sfarooq.github.com/2013/06/24/using-yii-layout-inheritance
+http://sfarooq.github.com/development/2013/06/24/tabs-in-yii
+http://sfarooq.github.com/development/2013/06/24/integrating-yii-with-twitter-bootstrap
 http://sfarooq.github.com/development/2013/06/23/integrating-yeoman-create-project-with-yii
 http://sfarooq.github.com/development/2013/06/23/data-grids-with-angularjs
 http://sfarooq.github.com/development/2013/06/16/in-search-of-a-front-end-development-framework

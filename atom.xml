@@ -4,13 +4,144 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-06-24T02:31:26-04:00</updated>
+ <updated>2013-06-27T22:50:22-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
    <email>sa@dfarooq.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Image/Thumbnail Gallery with AngularJS</title>
+   <link href="http://sfarooq.github.com/development/2013/06/27/imagethumbnail-gallery-with-angularjs"/>
+   <updated>2013-06-27T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/27/imagethumbnail-gallery-with-angularjs</id>
+   <content type="html">&lt;p&gt;I need to add a thumbnail gallery for the reports we provide on our online platform. Twitter Bootstrap has a great framework for setting this up quite easily using available CSS classes.&lt;/p&gt;
+
+&lt;p&gt;For now, I&amp;#8217;m just going to use the default setup and use CSS3 animations to fade in and out the images based on what&amp;#8217;s being hovered over.&lt;/p&gt;
+
+&lt;p&gt;This is what it looks like right now:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='css'&gt;&lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;div&lt;/span&gt; &lt;span class='nt'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;row-fluid&amp;quot;&lt;/span&gt; &lt;span class='nt'&gt;ng-controller&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;ThumbnailsCtrl&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;ul&lt;/span&gt; &lt;span class='nt'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;thumbnails&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;li&lt;/span&gt; &lt;span class='nt'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;span4&amp;quot;&lt;/span&gt; &lt;span class='nt'&gt;ng-repeat&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;report in reports&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;div&lt;/span&gt; &lt;span class='nt'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;thumbnail&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                    &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;img&lt;/span&gt; &lt;span class='nt'&gt;data-src&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;holder.js/300x200&amp;quot;&lt;/span&gt; &lt;span class='nt'&gt;alt&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;300x200&amp;quot;&lt;/span&gt; &lt;span class='nt'&gt;style&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;width: 300px; height: 200px;&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                    &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;div&lt;/span&gt; &lt;span class='nt'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;caption&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                        &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;h3&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;h3&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                        &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;p&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;p&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                        &lt;span class='o'&gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;p&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class='nt'&gt;a&lt;/span&gt; &lt;span class='nt'&gt;href&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;#&amp;quot;&lt;/span&gt; &lt;span class='nt'&gt;class&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;btn btn-primary&amp;quot;&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;&lt;span class='nt'&gt;Go&lt;/span&gt; &lt;span class='nt'&gt;To&lt;/span&gt; &lt;span class='nt'&gt;Report&lt;/span&gt;&lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;a&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                    &lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;div&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;div&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;li&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;ul&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class='o'&gt;&amp;lt;/&lt;/span&gt;&lt;span class='nt'&gt;div&lt;/span&gt;&lt;span class='o'&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Server Side Pagination with ngTable</title>
+   <link href="http://sfarooq.github.com/development/2013/06/26/server-side-pagination-with-ngtable"/>
+   <updated>2013-06-26T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/26/server-side-pagination-with-ngtable</id>
+   <content type="html">&lt;h2 id='what_is_server_side_pagination'&gt;What is Server Side Pagination?&lt;/h2&gt;
+
+&lt;p&gt;Sometimes you just have too much data to fit comfortably on a single page of a table or data-grid. There are two ways to deal with this. Client side pagination is when you get all the data from the server and use Javascript to show only some of it on the one page. Upon navigation to a different page, a new set of data is loaded. In server side pagination, only the amount of data to be shown on one page is loaded from the server. Upon navigation to a different page a new call is made to the server to get data for that page.&lt;/p&gt;
+
+&lt;h2 id='server_side_pagination_with_ngtable'&gt;Server Side Pagination with ngTable&lt;/h2&gt;
+
+&lt;p&gt;I chose ngTable as my standard table view. The reasons for this choice are detailed &lt;a href='2013-06-23-data-grids-with-angularjs.html'&gt;elsewhere&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id='getting_totals'&gt;Getting Totals&lt;/h2&gt;
+
+&lt;p&gt;As explained &lt;a href='http://www.arraystudio.com/as-workshop/mysql-get-total-number-of-rows-when-using-limit.html'&gt;here&lt;/a&gt; getting the total values that &amp;#8220;would&amp;#8221; be returned is absolutely essential if you are going to have pagination.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Using Yii Layout Inheritance</title>
+   <link href="http://sfarooq.github.com/2013/06/24/using-yii-layout-inheritance"/>
+   <updated>2013-06-24T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/2013/06/24/using-yii-layout-inheritance</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>Tabs in Yii</title>
+   <link href="http://sfarooq.github.com/development/2013/06/24/tabs-in-yii"/>
+   <updated>2013-06-24T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/24/tabs-in-yii</id>
+   <content type="html">&lt;h2 id='tabs_in_yii'&gt;Tabs in Yii&lt;/h2&gt;
+
+&lt;p&gt;Based on the new design of the InterLACE teacher dashboard, there needs to be a tabs layout on the main overview data grid.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Integrating Yii with Twitter Bootstrap</title>
+   <link href="http://sfarooq.github.com/development/2013/06/24/integrating-yii-with-twitter-bootstrap"/>
+   <updated>2013-06-24T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/24/integrating-yii-with-twitter-bootstrap</id>
+   <content type="html">&lt;h1 id='why_twitter_boostrap'&gt;Why Twitter Boostrap?&lt;/h1&gt;
+
+&lt;p&gt;I would like to include &lt;a href='http://twitter.github.com/bootstrap'&gt;Twitter Bootstrap&lt;/a&gt;. The primary reason for doing so if to get the &lt;a href='http://twitter.github.io/bootstrap/scaffolding.html#gridSystem'&gt;grid&lt;/a&gt; capability which is just way more convenient that setting weird CSS on elements.&lt;/p&gt;
+
+&lt;h2 id='options'&gt;Options&lt;/h2&gt;
+
+&lt;p&gt;There seem to be two ways to do this. One is using Yii&amp;#8217;s &lt;a href='http://www.cniska.net/yii-bootstrap/'&gt;Twitter Bootstrap extension&lt;/a&gt;. Using this extension you would add Twitter components to your page using snippets like this:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='php'&gt;&lt;span class='cp'&gt;&amp;lt;?php&lt;/span&gt; &lt;span class='nv'&gt;$this&lt;/span&gt;&lt;span class='o'&gt;-&amp;gt;&lt;/span&gt;&lt;span class='na'&gt;widget&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;bootstrap.widgets.TbButton&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='k'&gt;array&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;
+    &lt;span class='s1'&gt;&amp;#39;label&amp;#39;&lt;/span&gt;&lt;span class='o'&gt;=&amp;gt;&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;Primary&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;
+    &lt;span class='s1'&gt;&amp;#39;type&amp;#39;&lt;/span&gt;&lt;span class='o'&gt;=&amp;gt;&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;primary&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='c1'&gt;// null, &amp;#39;primary&amp;#39;, &amp;#39;info&amp;#39;, &amp;#39;success&amp;#39;, &amp;#39;warning&amp;#39;, &amp;#39;danger&amp;#39; or &amp;#39;inverse&amp;#39;&lt;/span&gt;
+    &lt;span class='s1'&gt;&amp;#39;size&amp;#39;&lt;/span&gt;&lt;span class='o'&gt;=&amp;gt;&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;large&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='c1'&gt;// null, &amp;#39;large&amp;#39;, &amp;#39;small&amp;#39; or &amp;#39;mini&amp;#39;&lt;/span&gt;
+&lt;span class='p'&gt;));&lt;/span&gt; &lt;span class='cp'&gt;?&amp;gt;&lt;/span&gt;&lt;span class='x' /&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As opposed to :&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;&lt;span class='nt'&gt;&amp;lt;button&lt;/span&gt; &lt;span class='na'&gt;class=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;btn btn-primary&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;Button&lt;span class='nt'&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So that settles it. I&amp;#8217;m going to go for the latter.&lt;/p&gt;
+
+&lt;h2 id='how_to_use_it'&gt;How To Use It&lt;/h2&gt;
+
+&lt;p&gt;Yii supports layout inheritance. You can define layouts at the Application, Controller or View level. Since, I&amp;#8217;m going to be using the same layout throughout the views I&amp;#8217;ll be setting it up at the Controller level.&lt;/p&gt;
+
+&lt;p&gt;I create a new file called &lt;code&gt;twitter-bootstrap.php&lt;/code&gt; in the &lt;code&gt;views/layouts&lt;/code&gt; folder.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='php'&gt;&lt;span class='x'&gt;class DashboardController extends Controller&lt;/span&gt;
+&lt;span class='x'&gt;{&lt;/span&gt;
+&lt;span class='x'&gt;    public $layout=&amp;#39;//layouts/twitter-bootstrap&amp;#39;;&lt;/span&gt;
+&lt;span class='x'&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Simple. All views of this controller will now use the layout defined in &lt;code&gt;twitter-bootstrap.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id='now_the_hard_part'&gt;Now the Hard Part&lt;/h2&gt;
+
+&lt;p&gt;How to define the layout itself ? Should be simple enough:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='html'&gt;&lt;span class='cp'&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class='nt'&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+&lt;span class='nt'&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class='cp'&gt;&amp;lt;?php echo CHtml::cssFile(Yii::app()-&amp;gt;baseUrl.&amp;#39;/css/bootstrap.css&amp;#39;); ?&amp;gt;&lt;/span&gt;
+&lt;span class='nt'&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+&lt;span class='nt'&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+&lt;span class='nt'&gt;&amp;lt;div&lt;/span&gt; &lt;span class='na'&gt;class=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;container-fluid&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class='nt'&gt;&amp;lt;div&lt;/span&gt; &lt;span class='na'&gt;class=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;row-fluid&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class='nt'&gt;&amp;lt;div&lt;/span&gt; &lt;span class='na'&gt;id=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;header&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
+            ...site logo and other header content...
+        &lt;span class='nt'&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class='nt'&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+
+    &lt;span class='cp'&gt;&amp;lt;?php echo $content; ?&amp;gt;&lt;/span&gt;
+
+    &lt;span class='nt'&gt;&amp;lt;div&lt;/span&gt; &lt;span class='na'&gt;class=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;row-fluid&amp;quot;&lt;/span&gt; &lt;span class='na'&gt;id=&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;footer&amp;quot;&lt;/span&gt;&lt;span class='nt'&gt;&amp;gt;&lt;/span&gt;
+        ...footer content...
+    &lt;span class='nt'&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;span class='c'&gt;&amp;lt;!-- footer --&amp;gt;&lt;/span&gt;
+
+&lt;span class='nt'&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;span class='c'&gt;&amp;lt;!-- container --&amp;gt;&lt;/span&gt;
+
+&lt;span class='nt'&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class='nt'&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+ </entry>
  
  <entry>
    <title>Integrating Yeoman based Project with Yii</title>

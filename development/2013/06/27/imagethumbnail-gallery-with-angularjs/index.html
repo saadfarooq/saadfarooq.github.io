@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>
       
-        Integrating Yeoman based Project with Yii - 
+        Image/Thumbnail Gallery with AngularJS - 
       
       Saad's Blog
     </title>
-    <meta name="description" content="Needs improvement">
+    <meta name="description" content="">
     <meta name="author" content="Saad Farooq">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- HTML5 shim, for IE6-8 support of HTML elements -->
@@ -156,67 +156,46 @@
         
 <div class="page-header">
   <h1>
-    Integrating Yeoman based Project with Yii 
+    Image/Thumbnail Gallery with AngularJS 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h2 id='options'>Options</h2>
+    <p>I need to add a thumbnail gallery for the reports we provide on our online platform. Twitter Bootstrap has a great framework for setting this up quite easily using available CSS classes.</p>
 
-<p>The Yeoman based Angular project builds to HTML and Javascript.</p>
+<p>For now, I&#8217;m just going to use the default setup and use CSS3 animations to fade in and out the images based on what&#8217;s being hovered over.</p>
 
-<p>There are two main options for integrating with Yii.</p>
+<p>This is what it looks like right now:</p>
+<div class='highlight'><pre><code class='css'><span class='o'>&lt;</span><span class='nt'>div</span> <span class='nt'>class</span><span class='o'>=</span><span class='s2'>&quot;row-fluid&quot;</span> <span class='nt'>ng-controller</span><span class='o'>=</span><span class='s2'>&quot;ThumbnailsCtrl&quot;</span><span class='o'>&gt;</span>
+        <span class='o'>&lt;</span><span class='nt'>ul</span> <span class='nt'>class</span><span class='o'>=</span><span class='s2'>&quot;thumbnails&quot;</span><span class='o'>&gt;</span>
+            <span class='o'>&lt;</span><span class='nt'>li</span> <span class='nt'>class</span><span class='o'>=</span><span class='s2'>&quot;span4&quot;</span> <span class='nt'>ng-repeat</span><span class='o'>=</span><span class='s2'>&quot;report in reports&quot;</span><span class='o'>&gt;</span>
+                <span class='o'>&lt;</span><span class='nt'>div</span> <span class='nt'>class</span><span class='o'>=</span><span class='s2'>&quot;thumbnail&quot;</span><span class='o'>&gt;</span>
+                    <span class='o'>&lt;</span><span class='nt'>img</span> <span class='nt'>data-src</span><span class='o'>=</span><span class='s2'>&quot;holder.js/300x200&quot;</span> <span class='nt'>alt</span><span class='o'>=</span><span class='s2'>&quot;300x200&quot;</span> <span class='nt'>style</span><span class='o'>=</span><span class='s2'>&quot;width: 300px; height: 200px;&quot;</span><span class='o'>&gt;</span>
+                    <span class='o'>&lt;</span><span class='nt'>div</span> <span class='nt'>class</span><span class='o'>=</span><span class='s2'>&quot;caption&quot;</span><span class='o'>&gt;</span>
+                        <span class='o'>&lt;</span><span class='nt'>h3</span><span class='o'>&gt;</span>
 
-<ul>
-<li>Static HTML served directly from a directory</li>
+<span class='o'>&lt;/</span><span class='nt'>h3</span><span class='o'>&gt;</span>
+                        <span class='o'>&lt;</span><span class='nt'>p</span><span class='o'>&gt;</span>
 
-<li>HTML injected into a Yii PHP view</li>
-</ul>
-
-<h2 id='static_html'>Static HTML</h2>
-
-<p>The Yeoman project is enclosed in a self enclosed directory named <code>app</code> during development and builds to a <code>dist</code> directory. All required HTML and CSS files are within the same directory. The Angular framework has a level of abstraction implemented via directives called <code>ng-app</code>. Each <code>ng-app</code> contains multiple controllers (via <code>ng-controller</code>) which are data bound with associated <code>Controller</code> functions in Javascript. Routing can be implemented at the <code>ng-app</code> level with URL routes of the <code>#/&lt;route&gt;</code> pattern being assigned to various subviews by the Angular framework. This provides a nice modulization of Javascript actions and DOM manipulation (something which is particularly annoying otherwise) and also allows for bookmarkable URLs. E.g. the view</p>
-
-<pre><code>http://localhost/#/firstview
-http://localhost/#/secondview</code></pre>
-
-<p>can be implemented using different HTML files via the Angular routing mechanism. And be assigned to different <code>ng-controllers</code>.</p>
-
-<h3 id='implementation'>Implementation</h3>
-
-<p>The implementation in conjunction with Yii turns out to be simple. Copying the <code>app</code> (or <code>dist</code>) folder to the root of the Yii server creates the URL which simply loads the static HTML app. No problems at all. The Yii framework in the default configuration only routes the URL portion beyond the <code>/index.php/</code> to a Yii controller. Following are the two URL patterns.</p>
-
-<pre><code>http://&lt;serverroot&gt;/&lt;angular-app-directory&gt;/
-http://&lt;serverroot&gt;/index.php/&lt;controller&gt;/&lt;action&gt;/</code></pre>
-
-<p>An Angular static HTML in conjuction with Yii simply works using the former URL scheme.</p>
-
-<h2 id='as_a_yii_view'>As a Yii View</h2>
-
-<p>Yii views are rendered as PHP files. The parser parses any PHP directives in the view files, but only if there are any (smirks). By copying the contents of the Angular app&#8217;s HTML file to a PHP view file, it is simply rendered as HTML. The only problem now is making sure that the script loading tags work as expected. This turns out to be not so simple using just strings. The paths have to be hard-coded because Yii does not allow access to relative paths in sub-directories. Futhermore, the HTML files that make up the modularized views routed by the Angular app via URL routes must also be served as static files.</p>
-
-<h3 id='implementation'>Implementation</h3>
-
-<p>Currently, the static files are served via hard-coded paths. Once a decision is reached on what pattern of development to follow, the scripts and stylesheets are best served via the Yii assets system. This system takes scripts / stylesheet URLs from a standard directory and serves them via relative paths built during the compile process.</p>
-
-<h3 id='layout_inheritance'>Layout Inheritance</h3>
-
-<p>As of this writing, the Angular app served the Yii view inherits some layout from the default Yii layout whereas some is derived from the HTML app. This results in some disarray in the overall layout. The feed column which is designed to take up about a quarter of the real estate is limited to just enough to hold the placeholder text. Updating the script loading as above and abstracing the common elements to a Yii layout should fix this problem pleasantly based on the decision on what method to use.</p>
-
-<h3 id='trailing_issues'>Trailing Issues</h3>
-
-<p>The only remaining matter is the serving of the static HTML sub-view files. I&#8217;ll need to investigate some more on this. Perhaps Yii offers a way to serve these similar to how scripts are served. In the case where that is not possible, some security review might be undertaken of the situation. It is all just HTML and JS and not data is actually used until the app is running and the server authorizes the data, but you never know.</p>
+<span class='o'>&lt;/</span><span class='nt'>p</span><span class='o'>&gt;</span>
+                        <span class='o'>&lt;</span><span class='nt'>p</span><span class='o'>&gt;&lt;</span><span class='nt'>a</span> <span class='nt'>href</span><span class='o'>=</span><span class='s2'>&quot;#&quot;</span> <span class='nt'>class</span><span class='o'>=</span><span class='s2'>&quot;btn btn-primary&quot;</span><span class='o'>&gt;</span><span class='nt'>Go</span> <span class='nt'>To</span> <span class='nt'>Report</span><span class='o'>&lt;/</span><span class='nt'>a</span><span class='o'>&gt;</span>
+                    <span class='o'>&lt;/</span><span class='nt'>div</span><span class='o'>&gt;</span>
+                <span class='o'>&lt;/</span><span class='nt'>div</span><span class='o'>&gt;</span>
+            <span class='o'>&lt;/</span><span class='nt'>li</span><span class='o'>&gt;</span>
+        <span class='o'>&lt;/</span><span class='nt'>ul</span><span class='o'>&gt;</span>
+    <span class='o'>&lt;/</span><span class='nt'>div</span><span class='o'>&gt;</span>
+</code></pre></div>
     
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/development/2013/06/23/data-grids-with-angularjs" title="Data Grids with AngularJS">&larr; Previous</a>
+        <a class="btn prev" href="/development/2013/06/26/server-side-pagination-with-ngtable" title="Server Side Pagination with ngTable">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/development/2013/06/24/integrating-yii-with-twitter-bootstrap" title="Integrating Yii with Twitter Bootstrap">Next &rarr;</a>
+        <a class="btn next disabled">Next &rarr;</a>
       
     </div>
     <hr>
@@ -246,7 +225,7 @@ http://&lt;serverroot&gt;/index.php/&lt;controller&gt;/&lt;action&gt;/</code></p
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>23 June 2013</span></div>
+      <div class="date"><span>27 June 2013</span></div>
     </section>
     
       <section>
@@ -266,9 +245,13 @@ http://&lt;serverroot&gt;/index.php/&lt;controller&gt;/&lt;action&gt;/</code></p
 
   
      
-    	<li><a href="/tags.html#development-ref">development <span>8</span></a></li>
+    	<li><a href="/tags.html#twitter-bootstrap-ref">twitter-bootstrap <span>1</span></a></li>
      
     	<li><a href="/tags.html#interlace-ref">interlace <span>7</span></a></li>
+     
+    	<li><a href="/tags.html#development-ref">development <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#angularjs-ref">angularjs <span>1</span></a></li>
     
   
 
@@ -290,6 +273,8 @@ http://&lt;serverroot&gt;/index.php/&lt;controller&gt;/&lt;action&gt;/</code></p
       
         <a href="/development/2013/06/23/data-grids-with-angularjs">Data Grids with AngularJS</a><br />
       
+        <a href="/development/2013/06/23/integrating-yeoman-create-project-with-yii">Integrating Yeoman based Project with Yii</a><br />
+      
         <a href="/development/2013/06/24/integrating-yii-with-twitter-bootstrap">Integrating Yii with Twitter Bootstrap</a><br />
       
         <a href="/development/2013/06/24/tabs-in-yii">Tabs in Yii</a><br />
@@ -297,8 +282,6 @@ http://&lt;serverroot&gt;/index.php/&lt;controller&gt;/&lt;action&gt;/</code></p
         <a href="/2013/06/24/using-yii-layout-inheritance">Using Yii Layout Inheritance</a><br />
       
         <a href="/development/2013/06/26/server-side-pagination-with-ngtable">Server Side Pagination with ngTable</a><br />
-      
-        <a href="/development/2013/06/27/imagethumbnail-gallery-with-angularjs">Image/Thumbnail Gallery with AngularJS</a><br />
       
              
   </div>
