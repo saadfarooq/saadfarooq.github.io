@@ -10,6 +10,9 @@ http://sfarooq.github.com/presentations/linux-and-terminal.html
 http://sfarooq.github.com/presentations.html
 http://sfarooq.github.com/index.html
 
+http://sfarooq.github.com/development/2013/07/08/loading-excel-files-in-yii
+http://sfarooq.github.com/2013/07/01/custom-android-builds-with-gradle
+http://sfarooq.github.com/development/2013/06/29/post-request-from-angularjs-with-yii
 http://sfarooq.github.com/development/2013/06/27/imagethumbnail-gallery-with-angularjs
 http://sfarooq.github.com/development/2013/06/26/server-side-pagination-with-ngtable
 http://sfarooq.github.com/2013/06/24/using-yii-layout-inheritance

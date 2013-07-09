@@ -4,13 +4,44 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-06-27T22:50:22-04:00</updated>
+ <updated>2013-07-09T00:38:48-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
    <email>sa@dfarooq.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Loading Excel Files in Yii</title>
+   <link href="http://sfarooq.github.com/development/2013/07/08/loading-excel-files-in-yii"/>
+   <updated>2013-07-08T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/07/08/loading-excel-files-in-yii</id>
+   <content type="html">&lt;p&gt;#&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Custom Android Builds with Gradle</title>
+   <link href="http://sfarooq.github.com/2013/07/01/custom-android-builds-with-gradle"/>
+   <updated>2013-07-01T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/2013/07/01/custom-android-builds-with-gradle</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>POST request from AngularJS with Yii</title>
+   <link href="http://sfarooq.github.com/development/2013/06/29/post-request-from-angularjs-with-yii"/>
+   <updated>2013-06-29T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/06/29/post-request-from-angularjs-with-yii</id>
+   <content type="html">&lt;p&gt;I don&amp;#8217;t like Yii much. Maybe it&amp;#8217;s cause of the overbloatedness of PHP.&lt;/p&gt;
+
+&lt;p&gt;AngularJS, which is what I&amp;#8217;m using in the front-end, allows you to send Javascript objects using POST requests via JSON. When you do that, you expect there to be a &lt;code&gt;$_POST&lt;/code&gt; object in Yii from which you can conveniently partake of your desired data.&lt;/p&gt;
+
+&lt;p&gt;After spending some time trying to figure out why that is so, I came upon &lt;a href='http://learnyii.blogspot.com/2011/11/yii-json-post-model-save.html'&gt;this&lt;/a&gt; post. It&amp;#8217;s annoying but basically you have to just do a low-level PHP read using.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='php'&gt;&lt;span class='x'&gt;$post = file_get_contents(&amp;quot;php://input&amp;quot;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Oh Yii !! How I hate thee&amp;#8230;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Image/Thumbnail Gallery with AngularJS</title>
