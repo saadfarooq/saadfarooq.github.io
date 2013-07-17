@@ -10,6 +10,10 @@ http://sfarooq.github.com/presentations/linux-and-terminal.html
 http://sfarooq.github.com/presentations.html
 http://sfarooq.github.com/index.html
 
+http://sfarooq.github.com/research/2013/07/16/csta-2013-report
+http://sfarooq.github.com/development/2013/07/12/android-gradle-project-management
+http://sfarooq.github.com/2013/07/11/specifications-for-online-educational-and-robotics-platform
+http://sfarooq.github.com/research/2013/07/10/review-of-research-articles-on-kids-understanding-of-functions
 http://sfarooq.github.com/development/2013/07/08/loading-excel-files-in-yii
 http://sfarooq.github.com/2013/07/01/custom-android-builds-with-gradle
 http://sfarooq.github.com/development/2013/06/29/post-request-from-angularjs-with-yii

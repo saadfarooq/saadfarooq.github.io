@@ -4,7 +4,7 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-07-09T00:38:48-04:00</updated>
+ <updated>2013-07-17T03:23:18-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
@@ -13,11 +13,151 @@
 
  
  <entry>
+   <title>CSTA 2013 Report</title>
+   <link href="http://sfarooq.github.com/research/2013/07/16/csta-2013-report"/>
+   <updated>2013-07-16T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/07/16/csta-2013-report</id>
+   <content type="html">&lt;h1 id='general_overview'&gt;General Overview&lt;/h1&gt;
+
+&lt;p&gt;The conference, as the title would suggest is geared towards teachers of Computer Science, particularly at the school level. The sessions therefore, were based more on the practical elements of teaching computer science than theoretical understanding of Computer Science concepts.&lt;/p&gt;
+
+&lt;h1 id='programming_through_art_and_math_sheena_vaidyanathan'&gt;Programming through Art and Math: Sheena Vaidyanathan&lt;/h1&gt;
+
+&lt;p&gt;Sheena Vaidyanathan runs a program called &lt;a href='http://www.computersforcreativity.com/school-programs/lasdcstem'&gt;CSTEM&lt;/a&gt; in the Los Altos school districts of California. The stated program highlights are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Pair Programming&lt;/li&gt;
+
+&lt;li&gt;Focus on design, art, creativity&lt;/li&gt;
+
+&lt;li&gt;Extensive use of Edmodo to engage and assign work, post finished projects, comment on posts, ask questions after class, homework/quizzes, class discussions&lt;/li&gt;
+
+&lt;li&gt;Student showcase and competition&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The talk was mostly about her use of Processing.js via &lt;a href='http://www.khanacademy.org/cs'&gt;KhanAcademy.org&lt;/a&gt; to engage students in programming through art. She also advocated &lt;a href='http://www.edmodo.com'&gt;Edmodo&lt;/a&gt; as a communications tool. Her website &lt;a href='http://www.computersforcreativity.com/'&gt;www.computersforcreativity.com&lt;/a&gt; details this and her other endeavors.&lt;/p&gt;
+
+&lt;h3 id='my_notes'&gt;My Notes&lt;/h3&gt;
+
+&lt;p&gt;I was intrigued by this session because of the mention of art, math and programming and the possibility of the use of math and arts education and learning science to influence computer science learning. My impression though, is that the role of programming is unclear. I haven&amp;#8217;t read any of Sheena&amp;#8217;s other work so I may be wrong but the talk seemed to be more about the usability of tools rather than it&amp;#8217;s effectiveness. She did however, mention that introducing kids to Processing&amp;#8217;s text based setup before Scratch led to some struggles with syntax but ultimately some kids preferred it to the drag-and-drop of Scratch.&lt;/p&gt;
+
+&lt;h1 id='computer_science_with_calico_douglas_blank_laura_blankenship_ashley_gavin_jim_marshall_jennifer_s_kay_keith_ohara_mark_f_russo'&gt;Computer Science with Calico: Douglas Blank, Laura Blankenship, Ashley Gavin, Jim Marshall, Jennifer S. Kay, Keith O’Hara, Mark F. Russo&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href='http://calicoproject.org/'&gt;Calico&lt;/a&gt; is a multi-language programming environment/IDE. Right now it has the following languages:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jigsaw (a Scratch like drag and drop)&lt;/li&gt;
+
+&lt;li&gt;Python&lt;/li&gt;
+
+&lt;li&gt;Scheme&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The system is designed around transitions from (Scratch -&amp;gt; Jigsaw -&amp;gt; Python -&amp;gt; Scheme) but they aren&amp;#8217;t limiting themselves to just these languages. Java is coming up and they have plans for other languages too.&lt;/p&gt;
+
+&lt;p&gt;They weren&amp;#8217;t able to go through the whole presentation but it&amp;#8217;s shared online (&lt;a href='http://goo.gl/p2oKk'&gt;http://goo.gl/p2oKk&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The system seems very professionally made and has some great features built-in. Some of which are :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A shell within the IDE&lt;/li&gt;
+
+&lt;li&gt;Simulator for robots so you don&amp;#8217;t need an actual physical robot for testing (they showed off the Scribbler bot)&lt;/li&gt;
+
+&lt;li&gt;Real-time display of all the robot&amp;#8217;s (/simulated robot) parameters&lt;/li&gt;
+
+&lt;li&gt;ROS module for communicating with ROS enabled robots&lt;/li&gt;
+
+&lt;li&gt;All languages in a similar enivornment so the cognitive load of learning a new environment is spared&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='my_notes'&gt;My Notes&lt;/h3&gt;
+
+&lt;p&gt;This was the most interesting of the talks that I saw. There was some chaos around live demos but overall the demos were pretty cool and displayed the versatility of the system. It would be really awesome if the system could make libraries in one language could be made available in other languages. Don&amp;#8217;t know how hard that would be.&lt;/p&gt;
+
+&lt;h1 id='inspiring_high_school_students_in_stem_using_app_inventor_kristin_violette_and_shaileen_pokress'&gt;Inspiring High School Students in STEM Using App Inventor: Kristin Violette and Shaileen Pokress&lt;/h1&gt;
+
+&lt;p&gt;This session was more an account of how MIT AppInventor was used in a class-room in Connecticut and representatives of the class eventually ended up winning a state wide competition. Not a lot was mentioned about the software except for an (informal) announcement that the Alpha of the latest version of AppInventor was just released at &lt;a href='http://ai2.appinventor.mit.edu/'&gt;http://ai2.appinventor.mit.edu/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id='my_notes'&gt;My Notes&lt;/h2&gt;
+
+&lt;p&gt;This session was more oriented towards teachers that want to use AppInventor in their classrooms. One thing that I did find interesting about the implementation that the teacher was using was that they used a business oriented format i.e. the students made an elevator pitch about their apps that was &amp;#8220;judged&amp;#8221; by a &amp;#8216;Shark Tank&amp;#8217; like panel. Even though it&amp;#8217;s not really my area of research, I imagine there are some interesting links between student&amp;#8217;s engagement and the popularity of &amp;#8216;Shark Tank&amp;#8217;, the television show. That would be a good social psychology question.&lt;/p&gt;
+
+&lt;h1 id='mobile_programming_throwdown__david_reed_moderator_alfred_thompson_windows_ralph_morelli_android_and_xxx_ios'&gt;Mobile Programming Throwdown : David Reed (Moderator), Alfred Thompson (Windows), Ralph Morelli (Android), and XXX (iOS)&lt;/h1&gt;
+
+&lt;p&gt;First done at last year&amp;#8217;s conference, experts on the three main mobile development platforms Apple iOS, Google Android and Microsoft Windows Phone were give a task of developing a simple app live. The people came pre-prepared though so they could copy and paste pre-prepared snippets into the code.&lt;/p&gt;
+
+&lt;p&gt;The app idea this year was an app that looks through the phone contacts and randomly shows a contact with the ability to place a call to that contact. Kind of a &amp;#8216;I&amp;#8217;m feeling lucky&amp;#8217; for phone calls.&lt;/p&gt;
+
+&lt;p&gt;Each platform had approximately 15 minutes to build their app.&lt;/p&gt;
+
+&lt;h3 id='my_notes'&gt;My Notes&lt;/h3&gt;
+
+&lt;p&gt;Surprisingly, Windows Phone was the cleanest and quickest of the three platforms. I&amp;#8217;m never been a fan of how Visual Studio adds so much annoying infrastructure to the system instead of just starting barebones but for once, I was made to eat my words. Apple was by far the worst, the code was hard to follow along with and things were going on all over the place. The developer who already has a well known app on the AppStore couldn&amp;#8217;t finish in the alloted 15 minutes. The Android developer used MIT AppInventor for most of the work. However, since AppInventor is a much higher level abstraction, it didn&amp;#8217;t have the necessary feature for the random contact selection to be done entirely in AppInventor. For that part, the programmer used standard Java and referenced that from AppInventor. AppInventor doesn&amp;#8217;t give the whole feel of the Android Java system but since I have experience in that domain I can say that Windows Phone was still the clearest and easiet of the three systems.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Android Gradle Project Management</title>
+   <link href="http://sfarooq.github.com/development/2013/07/12/android-gradle-project-management"/>
+   <updated>2013-07-12T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/development/2013/07/12/android-gradle-project-management</id>
+   <content type="html">&lt;h2 id='basic_gradle_setup'&gt;Basic Gradle Setup&lt;/h2&gt;
+
+&lt;p&gt;Google decided to use Gradle is the build tool for Android recently and duely integrated the Gradle build system with Android Studio, the new IntelliJ IDEA based IDE. There is some great documentation about the new build system on &lt;a href='http://tools.android.com/tech-docs/new-build-system/user-guide'&gt;here&lt;/a&gt;.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Specifications for Online Educational and Robotics Platform</title>
+   <link href="http://sfarooq.github.com/2013/07/11/specifications-for-online-educational-and-robotics-platform"/>
+   <updated>2013-07-11T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/2013/07/11/specifications-for-online-educational-and-robotics-platform</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>Review of Research Articles on Kids' Understanding of Functions</title>
+   <link href="http://sfarooq.github.com/research/2013/07/10/review-of-research-articles-on-kids-understanding-of-functions"/>
+   <updated>2013-07-10T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/07/10/review-of-research-articles-on-kids-understanding-of-functions</id>
+   <content type="html">&lt;h2 id='main_ideas'&gt;Main Ideas&lt;/h2&gt;
+
+&lt;h3 id='process_view_of_functions'&gt;Process View of Functions&lt;/h3&gt;
+
+&lt;p&gt;Students need to be able to see functions as a process rather than a mapping of a discrete input value to a discrete output value. The process view of functions is a way to look at functions as something of a &amp;#8220;black box&amp;#8221; which performs a process on a &amp;#8216;set&amp;#8217; of input values rather than discrete input values. As opposed to the &amp;#8220;action view&amp;#8221; of functions in which some action is performed, e.g. substitution of values in an equation and a static output is achieved.&lt;/p&gt;
+
+&lt;h3 id='covariational_reasoning'&gt;Covariational Reasoning&lt;/h3&gt;
+
+&lt;p&gt;Covariational reasoning is the understanding of changes in input mapping to changes in output i.e. the covariation of outputs with inputs.&lt;/p&gt;
+
+&lt;h3 id='research_questions'&gt;Research Questions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Do students in introductory computer science / programming courses having similar struggles with programming procedures (alternate term for functions to avoid confusion)?&lt;/li&gt;
+
+&lt;li&gt;Is the representation of functions in computer programming an abstraction from the mathematical view of functions that is helpful in articulating the borders between&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id='todos_for_next_week'&gt;To-Dos For Next Week&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find keywords for searching for relevant research&lt;/li&gt;
+
+&lt;li&gt;Do a review of reviews&lt;/li&gt;
+
+&lt;li&gt;Find the interesting researchers in the CS education&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>Loading Excel Files in Yii</title>
    <link href="http://sfarooq.github.com/development/2013/07/08/loading-excel-files-in-yii"/>
    <updated>2013-07-08T00:00:00-04:00</updated>
    <id>http://sfarooq.github.com/development/2013/07/08/loading-excel-files-in-yii</id>
-   <content type="html">&lt;p&gt;#&lt;/p&gt;</content>
+   <content type="html">&lt;h1 id='library_to_use'&gt;Library to Use&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href='http://phpexcel.codeplex.com/'&gt;PHPExcel&lt;/a&gt; is the most comprehensive Excel manipulation library for PHP. I has great features for reading and manipulating Excel (and related) files.&lt;/p&gt;
+
+&lt;p&gt;I found a number of extensions written for Yii that claim to work. I didn&amp;#8217;t think any of them gave the complete array of features and some were just using PHPExcel in the background anyway.&lt;/p&gt;</content>
  </entry>
  
  <entry>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>
       
-        Research Proposal I - 
+        POST request from AngularJS with Yii - 
       
       Saad's Blog
     </title>
@@ -156,63 +156,30 @@
         
 <div class="page-header">
   <h1>
-    Research Proposal I 
+    POST request from AngularJS with Yii 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h1 id='research_study_proposal__fall_2013'>Research Study Proposal - Fall 2013</h1>
+    <p>I don&#8217;t like Yii much. Maybe it&#8217;s cause of the overbloatedness of PHP.</p>
 
-<p>This document aims to formulate a research study proposal related to research in the area of computer science education. The basic idea is to introduce computer science principles, particularly those related to programming; and especially functional programming, to students in K-12 by using mathematics as a lauchpad for their foray into computer science.</p>
+<p>AngularJS, which is what I&#8217;m using in the front-end, allows you to send Javascript objects using POST requests via JSON. When you do that, you expect there to be a <code>$_POST</code> object in Yii from which you can conveniently partake of your desired data.</p>
 
-<p>The proposal bases itself on a number of reasonable assumptions that are influence by discussions and things picked up here andt here . However, the absense of citations for these is obvious at this point and will hopefully be filled in over time via references to previous (or our own) research backing those claims.</p>
-
-<p>The research evolves into two distinct research questions :</p>
-
-<ul>
-<li>Can student work to understand the complex concepts of mathematics be leveraged to cause a &#8216;transfer of training effect&#8217; towards computer science (and vice versa) ?</li>
-
-<li>Can notation be used as a &#8216;tool of thought&#8217; to ease the transfer of concepts from mathematics to functional programming ?</li>
-</ul>
-
-<p>I will elaborate on each of these in turn.</p>
-
-<h2 id='functional_math'>Functional Math</h2>
-
-<p>Functional programming derives heavily from lambda calculus; a form of calculus that was conceived long before computers were the norm, for expressing mathematical computation. The influence of lambda calculus on functional programming gives it very strong mathematical roots. However, in spite of their obvious overlaps, neither field seems to augment the other in education. Students work their way through hard mathematical concepts and very little of that hard work is carried over to the programming realm <span>citation needed</span>. The hypothesis that the study would aim to affirm is that both fields are very similar but it is the pedagogical treatment of the concepts that makes the transfer difficult.</p>
-
-<p>I propose a study that asks people of various age groups what they thought were the hardest concepts were in mathematics and compares it to the same question asked of computer science students with reference to programming. The intuition is that both groups will find the concept of &#8216;function as data&#8217; to be among the hardest concepts. In mathematics, this concept is exhibited by operations such as derivative, summations, transforms, etc.</p>
-
-<p>The rationale here is that mathematics education does not elaborate the &#8216;function as data&#8217; concept explicitly and by coming up with pedagogical strategies to do so, we can make comp105 much less painful for future students.</p>
-
-<h3 id='particulars_of_study'>Particulars of Study</h3>
-
-<p>To be decided.</p>
-
-<h2 id='notation_as_a_tool_of_thought'>Notation as a Tool of Thought</h2>
-
-<p><a href='http://en.wikipedia.org/wiki/Kenneth_E._Iverson'>Kenneth Iverson</a>&#8217;s work on the use of mathematical notation in computer programming earned him a Turing award and led to the development of the APL programming language. &#8216;Notation as a Tool of Thought&#8217; was the title of his Turing award lecture. As the title suggests, it implies the utility of notation in the thought process. He came up with a notation called a the &#8216;Iverson notation&#8217; which could be used for writing and rationalizing about computer programs without being on a computer and the same notation could be transferred to the computer and just run <span>citation needed</span>.</p>
-
-<p>Notation seems to form another barrier to the &#8216;transfer of training&#8217; from mathematics to computer programming. In computer science courses, students find it hard to translate notational rules into computer programs <span>citation needed</span> and whereas the Iverson notation gave a way to unite the two worlds, the effect of the differences in notation was never formalized in research <span>citation needed</span>. Furthermore, the Iverson notation itself is a complex, hard to understand notation that was limited to using symbols that could be made available at the time <span>citation needed, seems a weird claim</span>.</p>
-
-<p>A more intuitive notation system, coupled with the versatility of input systems today could help in bridging the gap between notational mathematics and computer programming.</p>
-
-<p>The research study in this case is more an investigative study (would help if I knew more about research methodologies). We go in with no assumptions or hypotheses and give the subjects the task of coming up with concise notations for particular notational scenarios (possibly inspired by the first study above) and look for patterns in the results.</p>
-
-<h3 id='particulars_of_study'>Particulars of Study</h3>
-
-<p>To be decided.</p>
+<p>After spending some time trying to figure out why that is so, I came upon <a href='http://learnyii.blogspot.com/2011/11/yii-json-post-model-save.html'>this</a> post. It&#8217;s annoying but basically you have to just do a low-level PHP read using.</p>
+<div class='highlight'><pre><code class='php'><span class='x'>$post = file_get_contents(&quot;php://input&quot;);</span>
+</code></pre></div>
+<p>Oh Yii !! How I hate thee&#8230;</p>
     
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/reviews/2013/06/12/changing-minds-by-andrea-di-sessa" title="Changing Minds by Andrea Di Sessa">&larr; Previous</a>
+        <a class="btn prev" href="/development/2013/06/27/imagethumbnail-gallery-with-angularjs" title="Image/Thumbnail Gallery with AngularJS">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/development/2013/06/16/in-search-of-a-front-end-development-framework" title="In Search of a Front End Development Framework">Next &rarr;</a>
+        <a class="btn next" href="/2013/07/01/custom-android-builds-with-gradle" title="Custom Android Builds with Gradle">Next &rarr;</a>
       
     </div>
     <hr>
@@ -242,13 +209,13 @@
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>12 June 2013</span></div>
+      <div class="date"><span>29 June 2013</span></div>
     </section>
     
       <section>
         <h4>Category</h4>
         <span class="category">
-          research
+          development
         </span>
       </section>
          
@@ -262,9 +229,13 @@
 
   
      
-    	<li><a href="/tags.html#research-ref">research <span>3</span></a></li>
+    	<li><a href="/tags.html#development-ref">development <span>10</span></a></li>
      
-    	<li><a href="/tags.html#proposals-ref">proposals <span>1</span></a></li>
+    	<li><a href="/tags.html#interlace-ref">interlace <span>9</span></a></li>
+     
+    	<li><a href="/tags.html#angular-ref">angular <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#yii-ref">yii <span>4</span></a></li>
     
   
 
@@ -288,13 +259,13 @@
       
         <a href="/2013/07/01/custom-android-builds-with-gradle">Custom Android Builds with Gradle</a><br />
       
-        <a href="/development/2013/06/29/post-request-from-angularjs-with-yii">POST request from AngularJS with Yii</a><br />
-      
         <a href="/development/2013/06/27/imagethumbnail-gallery-with-angularjs">Image/Thumbnail Gallery with AngularJS</a><br />
       
         <a href="/development/2013/06/26/server-side-pagination-with-ngtable">Server Side Pagination with ngTable</a><br />
       
         <a href="/2013/06/24/using-yii-layout-inheritance">Using Yii Layout Inheritance</a><br />
+      
+        <a href="/development/2013/06/24/tabs-in-yii">Tabs in Yii</a><br />
       
              
   </div>
