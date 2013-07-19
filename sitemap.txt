@@ -10,6 +10,7 @@ http://sfarooq.github.com/presentations/linux-and-terminal.html
 http://sfarooq.github.com/presentations.html
 http://sfarooq.github.com/index.html
 
+http://sfarooq.github.com/research/2013/07/18/csed-research-overview
 http://sfarooq.github.com/research/2013/07/16/csta-2013-report
 http://sfarooq.github.com/development/2013/07/12/android-gradle-project-management
 http://sfarooq.github.com/2013/07/11/specifications-for-online-educational-and-robotics-platform
@@ -19,8 +20,6 @@ http://sfarooq.github.com/2013/07/01/custom-android-builds-with-gradle
 http://sfarooq.github.com/development/2013/06/29/post-request-from-angularjs-with-yii
 http://sfarooq.github.com/development/2013/06/27/imagethumbnail-gallery-with-angularjs
 http://sfarooq.github.com/development/2013/06/26/server-side-pagination-with-ngtable
-http://sfarooq.github.com/2013/06/24/using-yii-layout-inheritance
-http://sfarooq.github.com/development/2013/06/24/tabs-in-yii
 http://sfarooq.github.com/development/2013/06/24/integrating-yii-with-twitter-bootstrap
 http://sfarooq.github.com/development/2013/06/23/integrating-yeoman-create-project-with-yii
 http://sfarooq.github.com/development/2013/06/23/data-grids-with-angularjs

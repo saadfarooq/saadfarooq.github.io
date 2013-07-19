@@ -4,13 +4,109 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-07-17T03:27:42-04:00</updated>
+ <updated>2013-07-19T06:55:44-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
    <email>sa@dfarooq.com</email>
  </author>
 
+ 
+ <entry>
+   <title>CSEd Research Overview</title>
+   <link href="http://sfarooq.github.com/research/2013/07/18/csed-research-overview"/>
+   <updated>2013-07-18T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/07/18/csed-research-overview</id>
+   <content type="html">&lt;h1 id='todos_for_this_week'&gt;Todos for this week&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Find keywords for searching for relevant research&lt;/li&gt;
+
+&lt;li&gt;Do a review of reviews&lt;/li&gt;
+
+&lt;li&gt;Find the interesting researchers in the CS education&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='keywords'&gt;Keywords&lt;/h1&gt;
+
+&lt;p&gt;Karen Vagts at the Tufts University library provided great insight into searching for articles related to my area of interest which is multidisciplinary and therefore not straight forward to search for good research in. Online databases (like &lt;a href='http://www.eric.ed.gov/'&gt;ERIC&lt;/a&gt; for education) seem to help narrowing down the domain of the search results just by being limited to a certain field. For e.g. searching for functions on Google Scholar returns results from both the mathematical concept of functions as well as the computer science concept of function. ERIC on the other hand only returns results of the math variety. ERIC also provides greater options for filtering the results. Google Scholar is good for general overviews but it seems to make sense to move to a domain specific search provider once you have your topics narrowed down.&lt;/p&gt;
+
+&lt;h2 id='keywords_tested'&gt;Keywords Tested&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Survey, overview, taxonomy on ACM&amp;#8217;s SIGCSE website to get the research overview papers&lt;/li&gt;
+
+&lt;li&gt;Searching the computer science category on ERIC In general, Google Scholar does not seem to work too well.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='review_of_reviews'&gt;Review of Reviews&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A survey of literature on the teaching of introductory programming &lt;a href='http://dl.acm.org/citation.cfm?id=1345441&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;This much I know: thoughts on the past, present and future of educational programming tools &lt;a href='http://dl.acm.org/citation.cfm?id=2445196&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Sally Fincher from the University of Kent is a Computer Science Education Researcher Toolkit page &lt;a href='http://www.cs.kent.ac.uk/people/staff/saf/experiment-kits/index.html'&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Usability issues in the Design of Novice Programming System &lt;a href=''&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Not a relevant paper but sounds like a good read ; Reading a computer science research paper &lt;a href='http://dl.acm.org/citation.cfm?id=1595493&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Not relevant but ben might like: Survey of test driven development in academia &lt;a href='http://dl.acm.org/citation.cfm?id=1383602.1383644&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Just including this because it&amp;#8217;s Mark Guzdial and I should probably know this is the broader picture; A statewide survey on computing education pathways and influences: factors in broadening participation in computing &lt;a href='http://dl.acm.org/citation.cfm?id=2361276.2361304&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;Computational Thinking in K-12: A Review of the State of the Field &lt;a href='http://edr.sagepub.com/content/42/1/38.full.pdf+html?ijkey=yKLHJq4ZYELx.&amp;amp;keytype=ref&amp;amp;siteid=spedr'&gt;link&lt;/a&gt;&lt;/li&gt;
+
+&lt;li&gt;The future of computer languages; implications for education &lt;a href='http://dl.acm.org/citation.cfm?id=5600.5627&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='researchers'&gt;Researchers&lt;/h1&gt;
+
+&lt;h2 id='neil_b_dale_university_of_texas'&gt;Neil B Dale, University of Texas&lt;/h2&gt;
+
+&lt;p&gt;Two PhD thesis under here guidance seem pretty relevant.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Conceptual Models and Individual Cognitive Learning Styles in Teaching Recursion to Novices, Cheng-Chih Wu, 1993&lt;/li&gt;
+
+&lt;li&gt;Limitations in the Understanding of Mathematical Logic by Novice Computer Science Students,Vicki Lynn Almstrum, 1994.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is also a paper by her in SIGCSE, title &lt;a href='http://dl.acm.org/citation.cfm?id=1138403.1138432&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;Most difficult topics in CS1: results of an online survey of educators&lt;/a&gt; which sounds really interesting.&lt;/p&gt;
+
+&lt;h2 id='allison_elliot_tew_university_of_washington_tacoma'&gt;Allison Elliot Tew, University of Washington, Tacoma&lt;/h2&gt;
+
+&lt;p&gt;Language Independent Assessment of CS1 Scaffolding Research in Computer Science Education Not cognitive enough but better than most CS specific researchers. &lt;a href='http://www.cs.kent.ac.uk/events/conf/2006/icer/icer-talks/2006-icer-guzdial-tew.ppt'&gt;Presentation&lt;/a&gt; from ICER 2006.&lt;/p&gt;
+
+&lt;h2 id='vicki_l_almstrum_utexas_at_austin'&gt;Vicki L. Almstrum, UTexas at Austin&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href='http://dl.acm.org/citation.cfm?id=544414.544471&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;Import and export to/from computing science education: the case of mathematics education research&lt;/a&gt; I think I&amp;#8217;m in love&lt;/p&gt;
+
+&lt;h2 id='colin_johnson'&gt;Colin Johnson&lt;/h2&gt;
+
+&lt;p&gt;Will have to investigate more but he is part of the computer science education group at the University of Kent and his research interests include porting ideas from computing and mathematics to other areas and taking ideas from natural sciences and using them as metaphors for new ways of doing computing.&lt;/p&gt;
+
+&lt;h2 id='j_philip_east_northwestern_university'&gt;J Philip East, Northwestern University&lt;/h2&gt;
+
+&lt;h2 id='janet_kolodoner_georgia_tech'&gt;Janet Kolodoner, Georgia Tech&lt;/h2&gt;
+
+&lt;h2 id='rosario_vera_ruiz'&gt;Rosario Vera Ruiz&lt;/h2&gt;
+
+&lt;p&gt;From IES Jarifa Spain, this researcher published a paper in the &amp;#8216;Internation Journal of Technology in Mathematics Education&amp;#8217; title &amp;#8216;Teaching the Relevance of Mathematics in Information Technology through Functional Programming in Secondary School&amp;#8217;. This sounds exactly in line with the sort of research questions I have. Unfortunately, the remainder of his work appears to be in English.&lt;/p&gt;
+
+&lt;h2 id='peter_achten_nijmegen_institute_for_computing_and_information_sciences'&gt;Peter Achten, Nijmegen Institute for Computing and Information Sciences&lt;/h2&gt;
+
+&lt;p&gt;His primary area of research seems to be functional programming. However, he has an exciting program called &lt;a href='http://www.cs.ru.nl/P.Achten/SoccerFun/SoccerFun.html'&gt;&lt;code&gt;Soccer-Fun&lt;/code&gt;&lt;/a&gt; which is a framework for programming a soccer team using functional languages. The framework is used to teach functional programming.&lt;/p&gt;
+
+&lt;h2 id='micheal_kolling_university_of_kent'&gt;Micheal Kolling, University of Kent&lt;/h2&gt;
+
+&lt;p&gt;BlueJ / Greenfoot author.&lt;/p&gt;
+
+&lt;h2 id='philip_guo_google'&gt;Philip Guo, Google&lt;/h2&gt;
+
+&lt;p&gt;Not particularly relevant as a CSEd researcher but is pretty active in general HCI and wrote the Online Python Tutor.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>CSTA 2013 Report</title>
@@ -244,24 +340,6 @@
 &lt;h2 id='getting_totals'&gt;Getting Totals&lt;/h2&gt;
 
 &lt;p&gt;As explained &lt;a href='http://www.arraystudio.com/as-workshop/mysql-get-total-number-of-rows-when-using-limit.html'&gt;here&lt;/a&gt; getting the total values that &amp;#8220;would&amp;#8221; be returned is absolutely essential if you are going to have pagination.&lt;/p&gt;</content>
- </entry>
- 
- <entry>
-   <title>Using Yii Layout Inheritance</title>
-   <link href="http://sfarooq.github.com/2013/06/24/using-yii-layout-inheritance"/>
-   <updated>2013-06-24T00:00:00-04:00</updated>
-   <id>http://sfarooq.github.com/2013/06/24/using-yii-layout-inheritance</id>
-   <content type="html"></content>
- </entry>
- 
- <entry>
-   <title>Tabs in Yii</title>
-   <link href="http://sfarooq.github.com/development/2013/06/24/tabs-in-yii"/>
-   <updated>2013-06-24T00:00:00-04:00</updated>
-   <id>http://sfarooq.github.com/development/2013/06/24/tabs-in-yii</id>
-   <content type="html">&lt;h2 id='tabs_in_yii'&gt;Tabs in Yii&lt;/h2&gt;
-
-&lt;p&gt;Based on the new design of the InterLACE teacher dashboard, there needs to be a tabs layout on the main overview data grid.&lt;/p&gt;</content>
  </entry>
  
  <entry>
