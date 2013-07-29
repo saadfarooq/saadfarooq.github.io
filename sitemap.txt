@@ -1,16 +1,20 @@
 
-http://sfarooq.github.com/sitemap.txt
-http://sfarooq.github.com/atom.xml
-http://sfarooq.github.com/pages.html
-http://sfarooq.github.com/categories.html
+http://sfarooq.github.com/presentations.html
 http://sfarooq.github.com/tags.html
-http://sfarooq.github.com/archive.html
+http://sfarooq.github.com/atom.xml
 http://sfarooq.github.com/presentations/html5.html
 http://sfarooq.github.com/presentations/linux-and-terminal.html
-http://sfarooq.github.com/presentations.html
+http://sfarooq.github.com/sitemap.txt
+http://sfarooq.github.com/archive.html
+http://sfarooq.github.com/pages.html
 http://sfarooq.github.com/index.html
+http://sfarooq.github.com/categories.html
 
-http://sfarooq.github.com/research/2013/07/18/csed-research-overview
+http://sfarooq.github.com/2013/07/29/research-meeting-week-32
+http://sfarooq.github.com/2013/07/29/research-meeting-week-31
+http://sfarooq.github.com/2013/07/22/relevant-professors-in-cs-education
+http://sfarooq.github.com/research/2013/07/19/research-meeting-week-30
+http://sfarooq.github.com/research/2013/07/18/research-meeting-week-29
 http://sfarooq.github.com/research/2013/07/16/csta-2013-report
 http://sfarooq.github.com/development/2013/07/12/android-gradle-project-management
 http://sfarooq.github.com/2013/07/11/specifications-for-online-educational-and-robotics-platform

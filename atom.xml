@@ -4,7 +4,7 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-07-19T06:55:44-04:00</updated>
+ <updated>2013-07-29T12:22:49-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
@@ -13,10 +13,123 @@
 
  
  <entry>
-   <title>CSEd Research Overview</title>
-   <link href="http://sfarooq.github.com/research/2013/07/18/csed-research-overview"/>
+   <title>Research Meeting Week 32</title>
+   <link href="http://sfarooq.github.com/2013/07/29/research-meeting-week-32"/>
+   <updated>2013-07-29T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/2013/07/29/research-meeting-week-32</id>
+   <content type="html">&lt;h1 id='todos'&gt;Todos&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ping Norman&lt;/li&gt;
+
+&lt;li&gt;Meet Dorit&lt;/li&gt;
+
+&lt;li&gt;Find out requirements for completing Masters&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Research Meeting - Week 31</title>
+   <link href="http://sfarooq.github.com/2013/07/29/research-meeting-week-31"/>
+   <updated>2013-07-29T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/2013/07/29/research-meeting-week-31</id>
+   <content type="html"></content>
+ </entry>
+ 
+ <entry>
+   <title>Relevant Professors in CS Education</title>
+   <link href="http://sfarooq.github.com/2013/07/22/relevant-professors-in-cs-education"/>
+   <updated>2013-07-22T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/2013/07/22/relevant-professors-in-cs-education</id>
+   <content type="html">&lt;p&gt;Following is a list of professors who&amp;#8217;s work I found interesting and inspiring. I am particularly interested in the understanding of computer science / programming concepts so a lot of the research here will be lower level education research.&lt;/p&gt;
+
+&lt;h2 id='mark_guzdial_georgia_tech_page'&gt;Mark Guzdial, Georgia Tech &lt;a href='http://www.cc.gatech.edu/~guzdial/'&gt;page&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Mark is the sun of the CSEd solar system. He&amp;#8217;s been involved in just about everything to do with Computer science education. Currently, his work is more around the public policy aspect but he writes a very influential &lt;a href='http://computinged.wordpress.com'&gt;blog&lt;/a&gt; which is a great resource for anyone who&amp;#8217;s interested in computer science education.&lt;/p&gt;
+
+&lt;h2 id='moti_benari_weizmann_institute_of_science__israel_page'&gt;Moti Ben-Ari, Weizmann Institute of Science - Israel &lt;a href='http://www.weizmann.ac.il/sci-tea/benari/'&gt;page&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;I like Ben-Ari&amp;#8217;s work. He deals with a lot of the lower level understanding of computer science concepts / educational theories for computer science. Some of his interesting papers are: - &lt;a href='http://dl.acm.org/citation.cfm?id=274308'&gt;Constructivism in Computer Science Education&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id='michael_e_casperson_aarhus_university__denmark_page'&gt;Michael E Casperson, Aarhus University - Denmark &lt;a href='http://www.daimi.au.dk/~mec/'&gt;page&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Micheal seems deeply involved with &lt;a href='http://wipsce.org/'&gt;WiPSCE&lt;/a&gt;, a workshop in primary and secondary computing education.&lt;/p&gt;
+
+&lt;h2 id='neil_b_dale_university_of_texas'&gt;Neil B Dale, University of Texas&lt;/h2&gt;
+
+&lt;p&gt;Two PhD thesis under here guidance seem pretty relevant.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Conceptual Models and Individual Cognitive Learning Styles in Teaching Recursion to Novices, Cheng-Chih Wu, 1993&lt;/li&gt;
+
+&lt;li&gt;Limitations in the Understanding of Mathematical Logic by Novice Computer Science Students,Vicki Lynn Almstrum, 1994.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There is also a paper by her in SIGCSE, title &lt;a href='http://dl.acm.org/citation.cfm?id=1138403.1138432&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;Most difficult topics in CS1: results of an online survey of educators&lt;/a&gt; which sounds really interesting.&lt;/p&gt;
+
+&lt;h2 id='allison_elliot_tew_university_of_washington_tacoma'&gt;Allison Elliot Tew, University of Washington, Tacoma&lt;/h2&gt;
+
+&lt;p&gt;Language Independent Assessment of CS1 Scaffolding Research in Computer Science Education Not cognitive enough but better than most CS specific researchers. &lt;a href='http://www.cs.kent.ac.uk/events/conf/2006/icer/icer-talks/2006-icer-guzdial-tew.ppt'&gt;Presentation&lt;/a&gt; from ICER 2006.&lt;/p&gt;
+
+&lt;h2 id='vicki_l_almstrum_utexas_at_austin'&gt;Vicki L. Almstrum, UTexas at Austin&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href='http://dl.acm.org/citation.cfm?id=544414.544471&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;Import and export to/from computing science education: the case of mathematics education research&lt;/a&gt; I think I&amp;#8217;m in love&lt;/p&gt;
+
+&lt;h2 id='colin_johnson'&gt;Colin Johnson&lt;/h2&gt;
+
+&lt;p&gt;Will have to investigate more but he is part of the computer science education group at the University of Kent and his research interests include porting ideas from computing and mathematics to other areas and taking ideas from natural sciences and using them as metaphors for new ways of doing computing.&lt;/p&gt;
+
+&lt;h2 id='j_philip_east_northwestern_university'&gt;J Philip East, Northwestern University&lt;/h2&gt;
+
+&lt;h2 id='janet_kolodoner_georgia_tech'&gt;Janet Kolodoner, Georgia Tech&lt;/h2&gt;
+
+&lt;h2 id='rosario_vera_ruiz'&gt;Rosario Vera Ruiz&lt;/h2&gt;
+
+&lt;p&gt;From IES Jarifa Spain, this researcher published a paper in the &amp;#8216;Internation Journal of Technology in Mathematics Education&amp;#8217; title &amp;#8216;Teaching the Relevance of Mathematics in Information Technology through Functional Programming in Secondary School&amp;#8217;. This sounds exactly in line with the sort of research questions I have. Unfortunately, the remainder of his work appears to be in English.&lt;/p&gt;
+
+&lt;h2 id='peter_achten_nijmegen_institute_for_computing_and_information_sciences'&gt;Peter Achten, Nijmegen Institute for Computing and Information Sciences&lt;/h2&gt;
+
+&lt;p&gt;His primary area of research seems to be functional programming. However, he has an exciting program called &lt;a href='http://www.cs.ru.nl/P.Achten/SoccerFun/SoccerFun.html'&gt;&lt;code&gt;Soccer-Fun&lt;/code&gt;&lt;/a&gt; which is a framework for programming a soccer team using functional languages. The framework is used to teach functional programming.&lt;/p&gt;
+
+&lt;h2 id='micheal_kolling_university_of_kent'&gt;Micheal Kolling, University of Kent&lt;/h2&gt;
+
+&lt;p&gt;BlueJ / Greenfoot author.&lt;/p&gt;
+
+&lt;h2 id='philip_guo_google'&gt;Philip Guo, Google&lt;/h2&gt;
+
+&lt;p&gt;Not particularly relevant as a CSEd researcher but is pretty active in general HCI and wrote the Online Python Tutor.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Research Meeting - Week 30</title>
+   <link href="http://sfarooq.github.com/research/2013/07/19/research-meeting-week-30"/>
+   <updated>2013-07-19T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/07/19/research-meeting-week-30</id>
+   <content type="html">&lt;h1 id='todos_for_week_30'&gt;Todos for Week 30&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Look into the relation between concurrent programming and functional programming&lt;/li&gt;
+
+&lt;li&gt;Teaching of functional programming: connection between functional programming and mathematics&lt;/li&gt;
+
+&lt;li&gt;Figure out timelines etc. for IRB and scopes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='more_information'&gt;More Information&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is a workshop called &amp;#8220;Trends in Functional Programming in Education&amp;#8221; that might be of future interest. It&amp;#8217;s being held at Brigham Young University in Utah this year &lt;a href='http://wwwhome.ewi.utwente.nl/~holzenspiespkf/TFPIE2013.html'&gt;link&lt;/a&gt; footnote&lt;sup id='fnref:1'&gt;&lt;a href='#fn:1' rel='footnote'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;
+&lt;p&gt;Funnily enough, the General co-chair for this is Peter Achten who I listed as one of the professors of interest last week.&lt;/p&gt;
+&lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Research Meeting - Week 29</title>
+   <link href="http://sfarooq.github.com/research/2013/07/18/research-meeting-week-29"/>
    <updated>2013-07-18T00:00:00-04:00</updated>
-   <id>http://sfarooq.github.com/research/2013/07/18/csed-research-overview</id>
+   <id>http://sfarooq.github.com/research/2013/07/18/research-meeting-week-29</id>
    <content type="html">&lt;h1 id='todos_for_this_week'&gt;Todos for this week&lt;/h1&gt;
 
 &lt;ul&gt;
@@ -63,49 +176,7 @@
 
 &lt;h1 id='researchers'&gt;Researchers&lt;/h1&gt;
 
-&lt;h2 id='neil_b_dale_university_of_texas'&gt;Neil B Dale, University of Texas&lt;/h2&gt;
-
-&lt;p&gt;Two PhD thesis under here guidance seem pretty relevant.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Conceptual Models and Individual Cognitive Learning Styles in Teaching Recursion to Novices, Cheng-Chih Wu, 1993&lt;/li&gt;
-
-&lt;li&gt;Limitations in the Understanding of Mathematical Logic by Novice Computer Science Students,Vicki Lynn Almstrum, 1994.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;There is also a paper by her in SIGCSE, title &lt;a href='http://dl.acm.org/citation.cfm?id=1138403.1138432&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;Most difficult topics in CS1: results of an online survey of educators&lt;/a&gt; which sounds really interesting.&lt;/p&gt;
-
-&lt;h2 id='allison_elliot_tew_university_of_washington_tacoma'&gt;Allison Elliot Tew, University of Washington, Tacoma&lt;/h2&gt;
-
-&lt;p&gt;Language Independent Assessment of CS1 Scaffolding Research in Computer Science Education Not cognitive enough but better than most CS specific researchers. &lt;a href='http://www.cs.kent.ac.uk/events/conf/2006/icer/icer-talks/2006-icer-guzdial-tew.ppt'&gt;Presentation&lt;/a&gt; from ICER 2006.&lt;/p&gt;
-
-&lt;h2 id='vicki_l_almstrum_utexas_at_austin'&gt;Vicki L. Almstrum, UTexas at Austin&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href='http://dl.acm.org/citation.cfm?id=544414.544471&amp;amp;coll=DL&amp;amp;dl=GUIDE&amp;amp;CFID=234525748&amp;amp;CFTOKEN=55092647'&gt;Import and export to/from computing science education: the case of mathematics education research&lt;/a&gt; I think I&amp;#8217;m in love&lt;/p&gt;
-
-&lt;h2 id='colin_johnson'&gt;Colin Johnson&lt;/h2&gt;
-
-&lt;p&gt;Will have to investigate more but he is part of the computer science education group at the University of Kent and his research interests include porting ideas from computing and mathematics to other areas and taking ideas from natural sciences and using them as metaphors for new ways of doing computing.&lt;/p&gt;
-
-&lt;h2 id='j_philip_east_northwestern_university'&gt;J Philip East, Northwestern University&lt;/h2&gt;
-
-&lt;h2 id='janet_kolodoner_georgia_tech'&gt;Janet Kolodoner, Georgia Tech&lt;/h2&gt;
-
-&lt;h2 id='rosario_vera_ruiz'&gt;Rosario Vera Ruiz&lt;/h2&gt;
-
-&lt;p&gt;From IES Jarifa Spain, this researcher published a paper in the &amp;#8216;Internation Journal of Technology in Mathematics Education&amp;#8217; title &amp;#8216;Teaching the Relevance of Mathematics in Information Technology through Functional Programming in Secondary School&amp;#8217;. This sounds exactly in line with the sort of research questions I have. Unfortunately, the remainder of his work appears to be in English.&lt;/p&gt;
-
-&lt;h2 id='peter_achten_nijmegen_institute_for_computing_and_information_sciences'&gt;Peter Achten, Nijmegen Institute for Computing and Information Sciences&lt;/h2&gt;
-
-&lt;p&gt;His primary area of research seems to be functional programming. However, he has an exciting program called &lt;a href='http://www.cs.ru.nl/P.Achten/SoccerFun/SoccerFun.html'&gt;&lt;code&gt;Soccer-Fun&lt;/code&gt;&lt;/a&gt; which is a framework for programming a soccer team using functional languages. The framework is used to teach functional programming.&lt;/p&gt;
-
-&lt;h2 id='micheal_kolling_university_of_kent'&gt;Micheal Kolling, University of Kent&lt;/h2&gt;
-
-&lt;p&gt;BlueJ / Greenfoot author.&lt;/p&gt;
-
-&lt;h2 id='philip_guo_google'&gt;Philip Guo, Google&lt;/h2&gt;
-
-&lt;p&gt;Not particularly relevant as a CSEd researcher but is pretty active in general HCI and wrote the Online Python Tutor.&lt;/p&gt;</content>
+&lt;p&gt;I decided to move the list of relevant researchers I found to a &lt;a href='/2013/07/22/relevant-professors-in-cs-education'&gt;separate article&lt;/a&gt; because I kept adding one or two professors to each weekly review. Better to have them in one place.&lt;/p&gt;</content>
  </entry>
  
  <entry>
