@@ -10,6 +10,9 @@ http://sfarooq.github.com/pages.html
 http://sfarooq.github.com/index.html
 http://sfarooq.github.com/categories.html
 
+http://sfarooq.github.com/research/2013/08/17/research-agenda-2014-draft-2
+http://sfarooq.github.com/research/2013/08/17/research-agenda-2014-draft-1
+http://sfarooq.github.com/research/2013/07/31/do-we-need-variables
 http://sfarooq.github.com/2013/07/29/research-meeting-week-32
 http://sfarooq.github.com/2013/07/29/research-meeting-week-31
 http://sfarooq.github.com/2013/07/22/relevant-professors-in-cs-education

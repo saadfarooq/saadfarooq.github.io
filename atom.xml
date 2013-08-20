@@ -4,13 +4,128 @@
  <title>Saad's Blog</title>
  <link href="http://sfarooq.github.com/atom.xml" rel="self"/>
  <link href="http://sfarooq.github.com"/>
- <updated>2013-07-29T12:22:49-04:00</updated>
+ <updated>2013-08-19T22:47:06-04:00</updated>
  <id>http://sfarooq.github.com</id>
  <author>
    <name>Saad Farooq</name>
    <email>sa@dfarooq.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Research Agenda 2014 - Draft 2</title>
+   <link href="http://sfarooq.github.com/research/2013/08/17/research-agenda-2014-draft-2"/>
+   <updated>2013-08-17T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/08/17/research-agenda-2014-draft-2</id>
+   <content type="html">&lt;p&gt;The previous post talked about using a higher level language that looks at the engineering aspects of the program. The blocks being linked up are specific &amp;#8216;functions&amp;#8217; that perform some sort of computation on data passed to it.&lt;/p&gt;
+
+&lt;h2 id='separating_the_computation_from_the_thinking'&gt;Separating the Computation from the Thinking&lt;/h2&gt;
+
+&lt;p&gt;Computational thinking is one of the cool new terms in research. There is an ongoing debate on the ways to best describe what computational thinking is about.&lt;/p&gt;
+
+&lt;p&gt;Althought I&amp;#8217;m not privy to the debate literature, I think at least some of basics are simple enough. I like Google&amp;#8217;s approach to it and will follow the four main components of computation thinking that is referred to at http://www.google.com/edu/computational-thinking/what-is-ct.html&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Decomposition&lt;/li&gt;
+
+&lt;li&gt;Pattern Recognition&lt;/li&gt;
+
+&lt;li&gt;Pattern Generalization&lt;/li&gt;
+
+&lt;li&gt;Algorithmic Design&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In terms of separation between the engineering and computation parts, it is difficult to say at this point whether decomposition and pattern recognition and generalization should be handled at the &amp;#8216;computation&amp;#8217; or &amp;#8216;engineering&amp;#8217; levels. However, &amp;#8216;algorithmic design&amp;#8217;, it can be argued, is better suited for the computation level. Any computation that take place on data should be inside a &amp;#8216;function&amp;#8217; block. Functional programming techniques should be used to make the code as expressive as possible.&lt;/p&gt;
+
+&lt;h2 id='research_questions'&gt;Research Questions&lt;/h2&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Research Agenda 2014 - Draft 1</title>
+   <link href="http://sfarooq.github.com/research/2013/08/17/research-agenda-2014-draft-1"/>
+   <updated>2013-08-17T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/08/17/research-agenda-2014-draft-1</id>
+   <content type="html">&lt;p&gt;The realms of programming has traditionally been one dimensional i.e. all creation takes place in the realm of a computer program. The realm itself may be compound, for example: a program syntactically in text following a functional paradigm or visual programming using object-oriented programming.&lt;/p&gt;
+
+&lt;p&gt;However, computer science is somewhat unique compared to other areas such as engineering in that a single program is like an organism that has multiple layers and many of those layers are accessible.&lt;/p&gt;
+
+&lt;p&gt;In engineering design for example, the designer is working at a higher level. A bridge designer does not work with nor have access to the modules that comprise the bridge. The realm of the engineer is just engineering design. The materials he uses were part of a design but the realm of that design may have been completely different. The designer of the trusses may have used completely different tools; different methods of calculations. The bridge designer might not even be able to design the truss. Even if he does, the thinking paradigm changes and there is a noticable change where it does.&lt;/p&gt;
+
+&lt;p&gt;That is not so in computer science&amp;#8230; well&amp;#8230; specifically computer programming. The program designer will usually be the one writing all the way down in CS and in the one domain; whether that be functional or object oriented or whatever.&lt;/p&gt;
+
+&lt;p&gt;Much has been written on the feasiblity of different paradigms to programming for beginners giving an insight into how people think about programming natuarlly. It is clear that OO is not the way to go. Fucntional has it&amp;#8217;s advantages but it breaks down as soon as state comes into play.&lt;/p&gt;
+
+&lt;h2 id='proposal'&gt;Proposal:&lt;/h2&gt;
+
+&lt;p&gt;A language that has multiple realms i.e. the software engineering is at a higher level using some sort of blocks etc. The blocks are encapsulated functions that perform some sort of computation on input data.&lt;/p&gt;
+
+&lt;h2 id='key_features'&gt;Key features:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Control flow is taken care of at the engineering level i.e. there are no ifs a the functional level.&lt;/li&gt;
+
+&lt;li&gt;The function performs a specific computation and enforces constraints on inputs and outputs&lt;/li&gt;
+
+&lt;li&gt;The function implementation is free of state&lt;/li&gt;
+
+&lt;li&gt;The engineering implementation level defines contracts on the function blocks which are themselves a separate realm and provide a handy testing mechanism&lt;/li&gt;
+
+&lt;li&gt;Mock values for computation functions are used to test functional flow as soon as engineering is complete&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='advantages'&gt;Advantages:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Segration between software engineering and computation.&lt;/li&gt;
+
+&lt;li&gt;Some sort of insight into computational thinking&lt;/li&gt;
+
+&lt;li&gt;TDD from the get go (more specifically TDL)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='disadvantages'&gt;Disadvantages:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Doesn&amp;#8217;t cover the feasibility of the syntax etc. just the cognitive feasibility of using a higher level data flow language and a lower level functional language&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='research_questions'&gt;Research Questions:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Does having a higher level &amp;#8216;engineering&amp;#8217; language help students make sense of the code they are writing?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='study'&gt;Study:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Develop and test a language that works with some existing programming language taught at high schools in the area. Maybe a layer over Snap, Scratch or Alice&lt;/li&gt;
+&lt;/ul&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Do we need variables?</title>
+   <link href="http://sfarooq.github.com/research/2013/07/31/do-we-need-variables"/>
+   <updated>2013-07-31T00:00:00-04:00</updated>
+   <id>http://sfarooq.github.com/research/2013/07/31/do-we-need-variables</id>
+   <content type="html">&lt;p&gt;In my mission to reduce redunancy in the various concepts we are taught along the course of our education, one of my goals is to take out things we don&amp;#8217;t need from programming. Or more precisely, categorize things in terms of what are necessities and what are facilities.&lt;/p&gt;
+
+&lt;p&gt;Which brings me to the topic of variables&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;While looking for research on the the use of programming in CS education, I ran across a paper called &lt;a href='http://www.cs.kent.ac.uk/people/staff/dat/miranda/wadler87.pdf'&gt;&amp;#8216;Why calculating is better than scheming&amp;#8217;&lt;/a&gt; by Philip Wadler. One of his other works is a programming langauge called &lt;a href='http://groups.inf.ed.ac.uk/links/'&gt;&lt;code&gt;Links&lt;/code&gt;&lt;/a&gt;. The language is &lt;strong&gt;&amp;#8216;designed to make web programming easier&amp;#8217;&lt;/strong&gt;. The aim is to replace the myriad of languages used during standard web development (I use JS, HTML, PHP and MySQL in one of my projects) with a single one. The idea is novel and something that NodeJS aimed at by allowing web developers to use Javascript on both server and client.&lt;/p&gt;
+
+&lt;p&gt;My own thougts when I read about this stack was; why do we need variables. How did I make the mental leap? Well, when you consider the most common usage of variables in programming, there are two main ones:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;- Pass values to functions
+- Store values in an common accessible location for later retrieval&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, considering the concept of a &lt;code&gt;literacy of functional computation&lt;/code&gt; (which I will elaborate in a separate post but basically it means that the unit of data is a function and values are a special case of function i.e. a function that always returns the same value); and combining it with the general pattern of web programming where a database is used for persistance of data, it may be possible to define a scheme where variables are not needed.&lt;/p&gt;
+
+&lt;p&gt;For the two use cases defined above: if you are passing values to a function, just pass a function and if you need to persist data for a longer period or share it across various resources, save it the database.&lt;/p&gt;
+
+&lt;p&gt;The success of this relies on the proof of the two claims; one, that all uses of variables fall into the two broad categories and two, that the concept of saving to a database if clearer in the minds of novice programmer than the concept of storing in memory.&lt;/p&gt;
+
+&lt;p&gt;More on this as the story evolves&amp;#8230;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Research Meeting Week 32</title>
@@ -33,7 +148,20 @@
    <link href="http://sfarooq.github.com/2013/07/29/research-meeting-week-31"/>
    <updated>2013-07-29T00:00:00-04:00</updated>
    <id>http://sfarooq.github.com/2013/07/29/research-meeting-week-31</id>
-   <content type="html"></content>
+   <content type="html">&lt;h1 id='todos_for_week_30'&gt;Todos for Week 30&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Read Moti Ben-Ari&amp;#8217;s work on Constructivism in Computer Science&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='more_information'&gt;More Information&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;There is a workshop called &amp;#8220;Trends in Functional Programming in Education&amp;#8221; that might be of future interest. It&amp;#8217;s being held at Brigham Young University in Utah this year &lt;a href='http://wwwhome.ewi.utwente.nl/~holzenspiespkf/TFPIE2013.html'&gt;link&lt;/a&gt; footnote&lt;sup id='fnref:1'&gt;&lt;a href='#fn:1' rel='footnote'&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class='footnotes'&gt;&lt;hr /&gt;&lt;ol&gt;&lt;li id='fn:1'&gt;
+&lt;p&gt;Funnily enough, the General co-chair for this is Peter Achten who I listed as one of the professors of interest last week.&lt;/p&gt;
+&lt;a href='#fnref:1' rev='footnote'&gt;&amp;#8617;&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;</content>
  </entry>
  
  <entry>

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>
       
-        Research Meeting - Week 31 - 
+        Do we need variables? - 
       
       Saad's Blog
     </title>
@@ -156,36 +156,40 @@
         
 <div class="page-header">
   <h1>
-    Research Meeting - Week 31 
+    Do we need variables? 
     
   </h1>
 </div>
 
 <div class="row">
   <div class="span8">
-    <h1 id='todos_for_week_30'>Todos for Week 30</h1>
+    <p>In my mission to reduce redunancy in the various concepts we are taught along the course of our education, one of my goals is to take out things we don&#8217;t need from programming. Or more precisely, categorize things in terms of what are necessities and what are facilities.</p>
 
-<ul>
-<li>Read Moti Ben-Ari&#8217;s work on Constructivism in Computer Science</li>
-</ul>
+<p>Which brings me to the topic of variables&#8230;</p>
 
-<h1 id='more_information'>More Information</h1>
+<p>While looking for research on the the use of programming in CS education, I ran across a paper called <a href='http://www.cs.kent.ac.uk/people/staff/dat/miranda/wadler87.pdf'>&#8216;Why calculating is better than scheming&#8217;</a> by Philip Wadler. One of his other works is a programming langauge called <a href='http://groups.inf.ed.ac.uk/links/'><code>Links</code></a>. The language is <strong>&#8216;designed to make web programming easier&#8217;</strong>. The aim is to replace the myriad of languages used during standard web development (I use JS, HTML, PHP and MySQL in one of my projects) with a single one. The idea is novel and something that NodeJS aimed at by allowing web developers to use Javascript on both server and client.</p>
 
-<ul>
-<li>There is a workshop called &#8220;Trends in Functional Programming in Education&#8221; that might be of future interest. It&#8217;s being held at Brigham Young University in Utah this year <a href='http://wwwhome.ewi.utwente.nl/~holzenspiespkf/TFPIE2013.html'>link</a> footnote<sup id='fnref:1'><a href='#fn:1' rel='footnote'>1</a></sup></li>
-</ul>
-<div class='footnotes'><hr /><ol><li id='fn:1'>
-<p>Funnily enough, the General co-chair for this is Peter Achten who I listed as one of the professors of interest last week.</p>
-<a href='#fnref:1' rev='footnote'>&#8617;</a></li></ol></div>
+<p>My own thougts when I read about this stack was; why do we need variables. How did I make the mental leap? Well, when you consider the most common usage of variables in programming, there are two main ones:</p>
+
+<pre><code>- Pass values to functions
+- Store values in an common accessible location for later retrieval</code></pre>
+
+<p>Now, considering the concept of a <code>literacy of functional computation</code> (which I will elaborate in a separate post but basically it means that the unit of data is a function and values are a special case of function i.e. a function that always returns the same value); and combining it with the general pattern of web programming where a database is used for persistance of data, it may be possible to define a scheme where variables are not needed.</p>
+
+<p>For the two use cases defined above: if you are passing values to a function, just pass a function and if you need to persist data for a longer period or share it across various resources, save it the database.</p>
+
+<p>The success of this relies on the proof of the two claims; one, that all uses of variables fall into the two broad categories and two, that the concept of saving to a database if clearer in the minds of novice programmer than the concept of storing in memory.</p>
+
+<p>More on this as the story evolves&#8230;</p>
     
     <hr>
     <div class="pagination btn-group">
       
-        <a class="btn prev" href="/2013/07/22/relevant-professors-in-cs-education" title="Relevant Professors in CS Education">&larr; Previous</a>
+        <a class="btn prev" href="/2013/07/29/research-meeting-week-32" title="Research Meeting Week 32">&larr; Previous</a>
       
         <a class="btn" href="/archive.html">Archive</a>
       
-        <a class="btn next" href="/2013/07/29/research-meeting-week-32" title="Research Meeting Week 32">Next &rarr;</a>
+        <a class="btn next" href="/research/2013/08/17/research-agenda-2014-draft-1" title="Research Agenda 2014 - Draft 1">Next &rarr;</a>
       
     </div>
     <hr>
@@ -215,9 +219,40 @@
   <div class="span4">
     <section>
       <h4>Published</h4>
-      <div class="date"><span>29 July 2013</span></div>
+      <div class="date"><span>31 July 2013</span></div>
     </section>
+    
+      <section>
+        <h4>Category</h4>
+        <span class="category">
+          research
+        </span>
+      </section>
          
+    
+      <section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#research-ref">research <span>8</span></a></li>
+     
+    	<li><a href="/tags.html#ideas-ref">ideas <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#opinions-ref">opinions <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#unscientific-ref">unscientific <span>1</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
              
     
       <h4>Related Posts</h4>
@@ -226,9 +261,9 @@
       
         <a href="/research/2013/08/17/research-agenda-2014-draft-1">Research Agenda 2014 - Draft 1</a><br />
       
-        <a href="/research/2013/07/31/do-we-need-variables">Do we need variables?</a><br />
-      
         <a href="/2013/07/29/research-meeting-week-32">Research Meeting Week 32</a><br />
+      
+        <a href="/2013/07/29/research-meeting-week-31">Research Meeting - Week 31</a><br />
       
         <a href="/2013/07/22/relevant-professors-in-cs-education">Relevant Professors in CS Education</a><br />
       
