@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: research | ]]></title>
+  <link href="/categories/research/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-05T03:29:25-05:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Saad Farooq", "email"=>"sa@dfarooq.com", "github"=>"sfarooq", "twitter"=>"unimpeccable", "email_md5"=>"da46d3d12af35a4f70339ac6aba7f9c8"}]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Deconstructing Programs]]></title>
+    <link href="/blog/research/2012/12/10/deconstructing-programs"/>
+    <updated>2012-12-10T00:00:00-05:00</updated>
+    <id>/blog/research/2012/12/10/deconstructing-programs</id>
+    <content type="html"><![CDATA[<h1>Deconstructing Programming Languages for Reconstruction</h1>
+
+<p>I had a good discussion with Prof. Mark Guzdial from Georgia Tech today. I have been interested in the idea of having programming languages that people can use differently but at the same time have a social context to the programming by allowing differnt people to collaborate.</p>
+
+<p>However, this raises an important question and problem. Differnt people prefer different language. How do we get them to collaborate on the same code base ?</p>
+
+<p>For example, visual programming languages have been used for introductory programming, however I don&#39;t necessarily feel like checking someone&#39;s work in a visual language. I&#39;d like to work off a text based language. </p>
+
+<p>This led into my discussion with Mark. He hinted at some work done in the 60&#39;s that proved that all programs could be deconstructed using only four constructs <strong>if , then , else</strong> and <strong>while</strong>.</p>
+
+<p>This doesn&#39;t seem to be our real problem. The real problem seems to be the reconstruction. After deconstructing a programming into just these constructs what would be the best way to reconstruct them in a sane manner. That is an interesting question and one for which I do not currently have an answer.</p>
+]]></content>
+  </entry>
+  
+</feed>
