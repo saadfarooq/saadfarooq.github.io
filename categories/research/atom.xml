@@ -4,7 +4,7 @@
   <title><![CDATA[Category: research | ]]></title>
   <link href="/categories/research/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-01-05T03:29:25-05:00</updated>
+  <updated>2014-01-10T01:36:22-05:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Saad Farooq", "email"=>"sa@dfarooq.com", "github"=>"sfarooq", "twitter"=>"unimpeccable", "email_md5"=>"da46d3d12af35a4f70339ac6aba7f9c8"}]]></name>
@@ -14,21 +14,188 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Deconstructing Programs]]></title>
-    <link href="/blog/research/2012/12/10/deconstructing-programs"/>
-    <updated>2012-12-10T00:00:00-05:00</updated>
-    <id>/blog/research/2012/12/10/deconstructing-programs</id>
-    <content type="html"><![CDATA[<h1>Deconstructing Programming Languages for Reconstruction</h1>
+    <title type="html"><![CDATA[Is Computer Science Really in Danger?]]></title>
+    <link href="/blog/research/2014/01/06/Is-CSEd-in-danger"/>
+    <updated>2014-01-06T00:00:00-05:00</updated>
+    <id>/blog/research/2014/01/06/Is-CSEd-in-danger</id>
+    <content type="html"><![CDATA[<p>I consider myself a qualitative CSEd researcher (in as far as I consider myself a researcher, there is little evidence to support that claim). To me this means I am more worried about the quality of computer science we are teaching than the number of students that are enrolling in Computer Science programs. Partly, this has to do with my background as a citizen of a developing country where people will flock to any technology that hints at a reasonable income (this was the main reason I didn&#39;t do CS as my undergrad degree, too many people trying to get in, turned me off).</p>
 
-<p>I had a good discussion with Prof. Mark Guzdial from Georgia Tech today. I have been interested in the idea of having programming languages that people can use differently but at the same time have a social context to the programming by allowing differnt people to collaborate.</p>
+<p>Having said that, I do see the value in the research being done to improve enrollments and frankly, it&#39;s a better sell. Apparantly, that research seems to be paying off. On a University of Berkeley site, Professor David Patterson (with co-author Ed Lazowska of the University of Washington) did a post titled <a href="http://blogs.berkeley.edu/2013/11/26/why-are-english-majors-studying-computer-science/#_edn2"><em>Why are English majors studying computer science?</em></a>. They talk about how over the past decade, enrollments in introductory CS courses have seem significant rise. </p>
 
-<p>However, this raises an important question and problem. Differnt people prefer different language. How do we get them to collaborate on the same code base ?</p>
+<p>Mark Guzial echoed similar sentiments about Georgia Tech, Rose Hulman and Harvey Mudd on his <a href="http://computinged.wordpress.com/2013/12/10/why-are-english-and-lots-of-other-majors-studying-computer-science/">blog</a>. </p>
 
-<p>For example, visual programming languages have been used for introductory programming, however I don&#39;t necessarily feel like checking someone&#39;s work in a visual language. I&#39;d like to work off a text based language. </p>
+<p>The news is exciting but I wonder if this was bound of occur. Times have been tough and people see computer science as a lucrative field. I can&#39;t say I feel the view of the field has changed. My own view of the field has worsened since I started the Phd program but not in the same way that most people see it. I actually didn&#39;t mind the nerd culture or the image crisis the Richard Rashid talked about with programmers being seen as people who &quot;sit in front of a computer all day&quot; <a href="#Rashid:2008:ICI:1364782.1364793">(Rashid, 2008)</a>, I&#39;ve been doing that anyway for years. No... that&#39;s not it. What gets me is the &quot;nerd jockiness&quot;. The field is mean. There is a certain pride taken in the pain of overworking oneself. I&#39;m sure this is true for most fields but it seems more prominent in CS.</p>
 
-<p>This led into my discussion with Mark. He hinted at some work done in the 60&#39;s that proved that all programs could be deconstructed using only four constructs <strong>if , then , else</strong> and <strong>while</strong>.</p>
+<p>Having said that, I don&#39;t think the field discriminates in it&#39;s punishment. All are treated equally badly. It&#39;s only a certain demographic that makes it through that pain and it just so happens that it ends up being a white male dominated demographic.</p>
 
-<p>This doesn&#39;t seem to be our real problem. The real problem seems to be the reconstruction. After deconstructing a programming into just these constructs what would be the best way to reconstruct them in a sane manner. That is an interesting question and one for which I do not currently have an answer.</p>
+<p>So maybe there is more significance to this good news. Maybe the increasing enrollments will have a positive affect on the culture. Maybe what we really need is not good programmers but good people and this will get us some. Advocates of diversity would claim that that is almost certainly going to be the case. I have my doubts. There is only so much sitting in a front of computer screen all day that sane person can take. Which is why we need &quot;better&quot; computer science; where solving problems matters more than implementations. And that is why &quot;that&quot; is my crusade.</p>
+
+<h2>References:</h2>
+
+<p><ol class="bibliography"><li><span id="Rashid:2008:ICI:1364782.1364793">Rashid, R. (2008). Image Crisis: Inspiring a New Generation of Computer Scientists. <i>Commun. ACM</i>, <i>51</i>(7), 33–34. doi:10.1145/1364782.1364793</span></li></ol></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Programming versus Computer Science]]></title>
+    <link href="/blog/research/2014/01/05/Programming-versus-CS"/>
+    <updated>2014-01-05T00:00:00-05:00</updated>
+    <id>/blog/research/2014/01/05/Programming-versus-CS</id>
+    <content type="html"><![CDATA[<p>Denning and McGettrick <a href="#denning2005recentering">(Denning &#38; McGettrick, 2005)</a> postulated that the number of entrants to computer science was dropping because the focus of the field was on &#39;programming&#39; rather than something more engaging.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consectetur augue consequat pretium elementum. Duis pellentesque, arcu at feugiat varius, purus ante malesuada mi, sed iaculis turpis elit et orci. Nullam nulla elit, pellentesque et gravida eu, consectetur at massa. In hac habitasse platea dictumst. Mauris imperdiet in risus sit amet ullamcorper. Curabitur eu euismod ligula, vitae bibendum orci. Integer non lacus nec quam feugiat cursus non vitae lacus. Curabitur non est ornare, sagittis sapien id, molestie leo. Donec pulvinar, sapien nec convallis congue, sapien enim semper mi, in euismod mi nulla ultricies dolor.</p>
+
+<p>Integer vehicula nibh ut tincidunt fringilla. Curabitur lacus justo, consequat eget adipiscing sed, laoreet sed nisi. Proin sed aliquam augue. In hac habitasse platea dictumst. Integer sed ultrices felis. Quisque commodo, tellus eu euismod faucibus, mauris elit viverra neque, eget sagittis sem dui eget lacus. Nam id laoreet nulla, in ornare justo. Nulla eleifend aliquam tellus id mattis. Morbi vulputate, neque vitae posuere sagittis, dui neque egestas est, eget fringilla neque purus ac nisl. Integer sit amet urna consectetur, commodo nunc at, condimentum purus. Proin vitae magna sodales, commodo magna ut, elementum quam.</p>
+
+<p>Nullam ultrices urna nec dictum elementum. Cras iaculis lorem dui, id luctus purus eleifend nec. Integer commodo dolor ut pharetra feugiat. Cras vitae enim enim. Quisque orci urna, egestas dapibus diam vel, facilisis sodales ligula. Integer ullamcorper imperdiet tincidunt. Sed in blandit tortor. Quisque auctor augue ut pellentesque ultrices. Integer id quam ultricies purus lacinia commodo non nec leo. Nulla eu quam commodo, feugiat massa quis, volutpat risus. Quisque commodo vulputate sem, vel cursus erat tempor nec.</p>
+
+<p>Pellentesque tempus vestibulum lorem, a semper erat dapibus nec. Aenean eu turpis vel leo condimentum vulputate. Nam tempor sollicitudin eros, sit amet suscipit arcu luctus vitae. Aliquam erat volutpat. Nunc bibendum orci nisl, quis dignissim quam gravida nec. Nunc est mi, tempor eget laoreet ut, viverra in justo. Nullam eu lectus vehicula, commodo nulla ut, accumsan dui. Donec venenatis, nibh quis gravida fringilla, tellus sapien accumsan elit, et pellentesque purus neque ut ipsum. Nullam id tempor magna. Phasellus eleifend consequat enim.</p>
+
+<p>Etiam sed elit et neque vulputate interdum a vitae risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam vel eros rutrum, dictum ante sed, facilisis lacus. Sed pulvinar turpis tempor dui volutpat elementum. Aenean eget lobortis felis, id vulputate quam. Proin ullamcorper posuere nibh dapibus condimentum. Donec pretium lectus velit, vitae semper enim porttitor sit amet. Phasellus molestie vulputate blandit. Duis volutpat auctor dui a adipiscing. Donec id malesuada enim. Suspendisse euismod ut eros sit amet commodo. Suspendisse semper diam vitae elit sodales feugiat. Sed non commodo justo, ac imperdiet metus. Vivamus ornare elementum dolor vel iaculis.</p>
+
+<p>Citations not working.</p>
+
+<h2>References</h2>
+
+<p><ol class="bibliography"><li><span id="Rashid:2008:ICI:1364782.1364793">Rashid, R. (2008). Image Crisis: Inspiring a New Generation of Computer Scientists. <i>Commun. ACM</i>, <i>51</i>(7), 33–34. doi:10.1145/1364782.1364793</span></li>
+<li><span id="denning2005recentering">Denning, P. J., &#38; McGettrick, A. (2005). Recentering computer science. <i>Communications of the ACM</i>, <i>48</i>(11), 15–19.</span></li></ol></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Research Agenda 2014 - Draft 2]]></title>
+    <link href="/blog/research/2013/08/17/research-agenda-2014-draft-2"/>
+    <updated>2013-08-17T00:00:00-04:00</updated>
+    <id>/blog/research/2013/08/17/research-agenda-2014-draft-2</id>
+    <content type="html"><![CDATA[<p>The previous post talked about using a higher level language that looks at the engineering aspects of the program. The blocks being linked up are specific &#39;functions&#39; that perform some sort of computation on data passed to it.</p>
+
+<h2>Separating the Computation from the Thinking</h2>
+
+<p>Computational thinking is one of the cool new terms in research. There is an ongoing debate on the ways to best describe what computational thinking is about. </p>
+
+<p>Althought I&#39;m not privy to the debate literature, I think at least some of basics are simple enough. I like Google&#39;s approach to it and will follow the four main components of computation thinking that is referred to at http://www.google.com/edu/computational-thinking/what-is-ct.html</p>
+
+<ul>
+<li>Decomposition</li>
+<li>Pattern Recognition</li>
+<li>Pattern Generalization</li>
+<li>Algorithmic Design</li>
+</ul>
+
+<p>In terms of separation between the engineering and computation parts, it is difficult to say at this point whether decomposition and pattern recognition and generalization should be handled at the &#39;computation&#39; or &#39;engineering&#39; levels.
+However, &#39;algorithmic design&#39;, it can be argued, is better suited for the computation level. Any computation that take place on data should be inside a &#39;function&#39; block. Functional programming techniques should be used to make the code as expressive as possible.</p>
+
+<h2>Research Questions</h2>
+
+<ul>
+<li>What are the similarities and differences between compuation at the function level in math and CS ?</li>
+<li>What is the best notation to use considering existing knowledge that kids have about mathematical functions ?</li>
+<li>Does a student&#39;s mastery of maths affect their grasp of functional programming concepts ?</li>
+<li>Does abstracting conditionals and state to a higher level affect students&#39; use of conditionals in functional code ?</li>
+</ul>
+
+<h2>Study</h2>
+
+<ul>
+<li>Develop a few test cases for functional programming using a syntax close to mathematics but with CS specific additions such as recursion and data-types. - Test the language with students with similar knowledge in mathematics.</li>
+<li>Look for correlation between students&#39; performance using the new language their understanding of mathematical functions</li>
+</ul>
+
+<h2>Inspirations</h2>
+
+<p>Mathematical Thinking : http://www.math-in-cs.org/
+Peter B Henderson           : http://blue.butler.edu/~phenders/
+Keith Devlin                    : http://profkeithdevlin.com/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Research Agenda 2014 - Draft 1]]></title>
+    <link href="/blog/research/2013/08/17/research-agenda-2014-draft-1"/>
+    <updated>2013-08-17T00:00:00-04:00</updated>
+    <id>/blog/research/2013/08/17/research-agenda-2014-draft-1</id>
+    <content type="html"><![CDATA[<p>The realms of programming has traditionally been one dimensional i.e. all creation takes place in the realm of a computer program. The realm itself may be compound, for example: a program syntactically in text following a functional paradigm or visual programming using object-oriented programming.</p>
+
+<p>However, computer science is somewhat unique compared to other areas such as engineering in that a single program is like an organism that has multiple layers and many of those layers are accessible.</p>
+
+<p>In engineering design for example, the designer is working at a higher level. A bridge designer does not work with nor have access to the modules that comprise the bridge. The realm of the engineer is just engineering design. The materials he uses were part of a design but the realm of that design may have been completely different. The designer of the trusses may have used completely different tools; different methods of calculations. The bridge designer might not even be able to design the truss. Even if he does, the thinking paradigm changes and there is a noticable change where it does.</p>
+
+<p>That is not so in computer science... well... specifically computer programming. The program designer will usually be the one writing all the way down in CS and in the one domain; whether that be functional or object oriented or whatever.</p>
+
+<p>Much has been written on the feasiblity of different paradigms to programming for beginners giving an insight into how people think about programming natuarlly. It is clear that OO is not the way to go. Fucntional has it&#39;s advantages but it breaks down as soon as state comes into play.</p>
+
+<h2>Overall Language Design:</h2>
+
+<p>A language that has multiple realms i.e. the software engineering is at a higher level using some sort of blocks etc. The blocks are encapsulated functions that perform some sort of computation on input data.</p>
+
+<h2>Key features:</h2>
+
+<ul>
+<li>Control flow is taken care of at the engineering level i.e. there are no ifs a the functional level.</li>
+<li>The function performs a specific computation and enforces constraints on inputs and outputs</li>
+<li>The function implementation is free of state</li>
+<li>The engineering implementation level defines contracts on the function blocks which are themselves a separate realm and provide a handy testing mechanism</li>
+<li>Mock values for computation functions are used to test functional flow as soon as engineering is complete</li>
+</ul>
+
+<h2>Advantages:</h2>
+
+<ul>
+<li>Segration between software engineering and computation.</li>
+<li>Some sort of insight into computational thinking</li>
+<li>TDD from the get go (more specifically TDL)</li>
+</ul>
+
+<h2>Disadvantages:</h2>
+
+<ul>
+<li>Doesn&#39;t cover the feasibility of the syntax etc. just the cognitive feasibility of using a higher level data flow language and a lower level functional language</li>
+</ul>
+
+<h2>Research Questions:</h2>
+
+<ul>
+<li>Does having a higher level &#39;engineering&#39; language help students make sense of the code they are writing ?</li>
+<li>Are bugs reduced when using higher level engineering ?</li>
+<li>How does having a built in testing framework with a mock use case affect student&#39;s grasp of other cases ?</li>
+</ul>
+
+<h2>Study:</h2>
+
+<ul>
+<li>Develop and test a language that works with some existing programming language taught at high schools in the area. Maybe a layer over Snap, Scratch or Alice</li>
+</ul>
+
+<h2>Inspirations</h2>
+
+<p>David S Jenzen      : http://users.csc.calpoly.edu/~djanzen/
+Michael Kolling     : http://www.cs.kent.ac.uk/people/staff/mik/
+Michael Casperson   : http://cs.au.dk/~mec/</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Do we need variables?]]></title>
+    <link href="/blog/research/2013/07/31/do-we-need-variables"/>
+    <updated>2013-07-31T00:00:00-04:00</updated>
+    <id>/blog/research/2013/07/31/do-we-need-variables</id>
+    <content type="html"><![CDATA[<p>In my mission to reduce redunancy in the various concepts we are taught along the course of our education, one of my goals is to take out things we don&#39;t need from programming. Or more precisely, categorize things in terms of what are necessities and what are facilities.</p>
+
+<p>Which brings me to the topic of variables...</p>
+
+<p>While looking for research on the the use of programming in CS education, I ran across a paper called <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/wadler87.pdf">&#39;Why calculating is better than scheming&#39;</a> by Philip Wadler. One of his other works is a programming langauge called <a href="http://groups.inf.ed.ac.uk/links/"><code>Links</code></a>. The language is <strong>&#39;designed to make web programming easier&#39;</strong>. The aim is to replace the myriad of languages used during standard web development (I use JS, HTML, PHP and MySQL in one of my projects) with a single one. The idea is novel and something that NodeJS aimed at by allowing web developers to use Javascript on both server and client.</p>
+
+<p>My own thougts when I read about this stack was; why do we need variables. How did I make the mental leap? Well, when you consider the most common usage of variables in programming, there are two main ones:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">- Pass values to functions
+- Store values in an common accessible location for later retrieval
+</code></pre></div>
+<p>Now, considering the concept of a <code>literacy of functional computation</code> (which I will elaborate in a separate post but basically it means that the unit of data is a function and values are a special case of function i.e. a function that always returns the same value); and combining it with the general pattern of web programming where a database is used for persistance of data, it may be possible to define a scheme where variables are not needed.</p>
+
+<p>For the two use cases defined above: if you are passing values to a function, just pass a function and if you need to persist data for a longer period or share it across various resources, save it the database.</p>
+
+<p>The success of this relies on the proof of the two claims; one, that all uses of variables fall into the two broad categories and two, that the concept of saving to a database if clearer in the minds of novice programmer than the concept of storing in memory.</p>
+
+<p>More on this as the story evolves...</p>
 ]]></content>
   </entry>
   

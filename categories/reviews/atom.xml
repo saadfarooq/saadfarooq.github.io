@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reviews | ]]></title>
+  <link href="/categories/reviews/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-10T01:36:22-05:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Saad Farooq", "email"=>"sa@dfarooq.com", "github"=>"sfarooq", "twitter"=>"unimpeccable", "email_md5"=>"da46d3d12af35a4f70339ac6aba7f9c8"}]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Changing Minds by Andrea Di Sessa]]></title>
+    <link href="/blog/reviews/2013/06/12/changing-minds-by-andrea-di-sessa"/>
+    <updated>2013-06-12T00:00:00-04:00</updated>
+    <id>/blog/reviews/2013/06/12/changing-minds-by-andrea-di-sessa</id>
+    <content type="html"><![CDATA[<h2>Introduction</h2>
+
+<p>This post is about the significant points and arguments I found in Andrea diSessa&#39;s book <code>Changing
+Minds</code>.</p>
+
+<h2>Things for Meeting</h2>
+
+<ul>
+<li>Discuss the comparison of computational literacy hierarchy with other literacy hierarchy</li>
+<li>Computational literacy is unique in that the content created is consumed in a different way i.e. With language literacy:
+
+<ul>
+<li>Literary actions: reading / writing</li>
+<li>Creation action : writing</li>
+<li>Consumption action : reading
+With computation literacy</li>
+<li>Literary actions: reading / writing code</li>
+<li>Creation: write &quot;code&quot;</li>
+<li>Consumption: read &quot;code&quot; / consume application</li>
+</ul></li>
+<li>More like scientific literacy</li>
+<li>Can you pay for my CSTA-13 registration ?</li>
+<li>The World of Functions as a Function</li>
+<li>Designing event based languages on the argument that they are more intuivitive.</li>
+</ul>
+
+<h2>Research Questions</h2>
+
+<ul>
+<li>Is teaching the &quot;everything is a function philosophy&quot; worth it ?</li>
+<li>How much harder is it in comparison ?</li>
+<li>Can it be a literacy extendable to arts who don&#39;t necessarily understand that they are doing math?
+
+<ul>
+<li>What do kids instinctively know, what can be elaborated on to make it clear and what has to be taught anew ?</li>
+<li>Can this philosophy be compatible with state based computational approaches? for e.g. programming a robot.</li>
+</ul></li>
+</ul>
+
+<h2>Notes</h2>
+
+<ul>
+<li>The tick model provides a good analogy to calculus i.e. looking at unit step intervals that make up a larger process (process is not the correct word)</li>
+<li>Lambda calculus provides a better mapping to algebra in my opinion.</li>
+<li>The notational significance of the <em>dx/dy</em> notation vs Newton&#39;s notation is emphasized. Seems to the be the most common example.</li>
+<li>Scientific communities are tool-rich cultures. Education does not seem to be.</li>
+<li>Algebra, calculus, tables are representational tools.</li>
+<li>Tools are abandoned as better tools come to forth. </li>
+<li>Tools in schoool tend be an end in thomselves and are related to outcomes like &quot;doing well in school&quot;</li>
+<li>Need to understand <em>p-prims</em> better.</li>
+<li><em>Half a literacy is not enough</em> to be revisited</li>
+</ul>
+
+<h1>Likes</h1>
+
+<ul>
+<li>The idea of teachers creating content is great</li>
+<li><em>p-prim</em> : <em>phenomenological primitives</em></li>
+</ul>
+
+<h1>Books to Read:</h1>
+
+<ul>
+<li>How People Learn</li>
+<li>Turtle Geometry</li>
+<li>Mindstorms</li>
+<li>Windows on Mathematical Learning - Richard Noss and Celia Hoile</li>
+</ul>
+
+<h1>Reading:</h1>
+
+<ul>
+<li>Three papers on young people&#39;s learning </li>
+</ul>
+]]></content>
+  </entry>
+  
+</feed>
