@@ -1,0 +1,49 @@
+<!DOCTYPE html><html><!DOCTYPE html><html><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>Setting up PhpUnit Testing with Yii and Composer</title><meta name=viewport content="width=device-width"><link rel=stylesheet href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700|Abril+Fatface"><!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet"> --><link href=//netdna.bootstrapcdn.com/bootswatch/3.0.3/yeti/bootstrap.min.css rel=stylesheet><link href=//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css rel=stylesheet><script src=http://code.jquery.com/jquery-2.0.3.min.js></script><script src=//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js></script><link rel=stylesheet href=/css/f79b.main.css></head><body><div class=row><header class="masthead col-md-4"><div class="inner text-center"><a href=/><img src="http://www.gravatar.com/avatar/da46d3d12af35a4f70339ac6aba7f9c8?s=150" class="center-block img-circle img-responsive"></a><h1>Saad Farooq</h1><p class=lead>I have issues... need pull requests</p><div id=contact-list class=text-center><ul class="list-unstyled list-inline"><li><a class="btn btn-circle btn-sm" href=https://github.com/sfarooq><i class="fa fa-github-alt fa-lg fa-2x fa-inverse"></i></a></li><li><a class="btn btn-circle btn-sm" href=https://twitter.com/unimpeccable><i class="fa fa-twitter fa-lg fa-2x"></i></a></li><li><a class="btn btn-circle btn-sm" href=mailto:sa@dfarooq.com><i class="fa fa-envelope fa-lg fa-2x"></i></a></li></ul><ul id=contact-list-secondary class="list-unstyled list-inline"></ul></div><div class=colophon><!--             <ul class="colophon-links">
+                <li>
+                    <a href="httdanps://github.com/mdo/hyde/archive/v.zip">Download</a>
+                </li>
+                <li>
+                    <a href="https://github.com/mdo/hyde">GitHub project</a>
+                </li>
+            </ul> --><p>&copy; 2014. Saad Farooq All rights reserved.</p></div></div></header><div class="content col-md-8 col-md-offset-4"><h2>Setting up PhpUnit Testing with Yii and Composer</h2><p class=meta>10 Jan 2014</p><div class=post><p>I decided to try <a href=http://getcomposer.org/download/>Composer</a> for dependency management with our <a href=http://int.erlace.com>Interlace</a> project. Composer itself is really easy to install and at least one of the installation options should work out.</p><p>Getting PhpUnit to work is a tad more annoying. Interlace uses Yii so we need the framework class as a dependency.</p><p>As per <a href=http://stackoverflow.com/questions/17648066/composer-and-yii>this</a> question on StackOverflow, I use another project for the dependency because the main Yii project includes a lot of non-relevant stuff such as documentation, whereas we only need the framework folder.</p><div class=highlight><pre><code class="text language-text" data-lang=text>{
+  &quot;require&quot;: {
+    &quot;square1-io/yii-framework&quot;: &quot;1.1.14&quot;
+  }
+}
+</code></pre></div><p>When doing <code>composer install</code>, this installs the Yii-framework to the <code>vendor/square1-io/yii-framework</code>. The Yii <code>bootstrap.php</code> file (and your main project files) should now use this path to define the framework.</p><div class=highlight><pre><code class="text language-text" data-lang=text>&lt;?php
+  // change the following paths if necessary
+  $yiit   = dirname(__FILE__).&#39;/../../vendor/square1-io/yii-framework/yiit.php&#39;;
+  $config = dirname(__FILE__).&#39;/../config/test.php&#39;;
+
+  require_once($yiit);
+  require_once(dirname(__FILE__).&#39;/WebTestCase.php&#39;);
+
+  Yii::createWebApplication($config);
+?&gt;
+</code></pre></div><p>Once that&#39;s running, there is the issue of PhpUnit. There are a bunch of dependencies in order to get it to work without any warnings or errors. I&#39;ll just list the <code>composer.json</code> instead of walking through each.</p><div class=highlight><pre><code class="text language-text" data-lang=text>{
+  &quot;require&quot;: {
+      &quot;square1-io/yii-framework&quot;: &quot;1.1.14&quot;
+  }
+  ,&quot;require-dev&quot;: {
+      &quot;phpunit/phpunit&quot;: &quot;3.7.*&quot;
+      ,&quot;phpunit/phpunit-selenium&quot;: &quot;&gt;=1.2&quot;
+      ,&quot;phpunit/php-invoker&quot;: &quot;*&quot;
+      ,&quot;phpunit/dbunit&quot;: &quot;&gt;=1.2&quot;
+      ,&quot;phpunit/phpunit-story&quot;: &quot;*&quot;
+  }
+}
+</code></pre></div><p>A <code>composer install</code> (or <code>composer update</code> if this isnt&#39; the first install) and you should be good. Tests can be run using the <code>phpunit</code> executable at <code>vendor/bin/phpunit</code>.</p><p>You might also want to remove the Internet Explorer link from the <code>phpunit.xml</code> file (unless you are using a Webdriver for it) or add others accordingly.</p><p>Now there&#39;s the problem of getting HTML reports. I have no idea why standard reporting (using the <code>--coverage-html</code> switch) produces a blank page. I&#39;ll update this if I find something.</p></div><hr><div id=disqus_thread></div><script type=text/javascript>var disqus_developer = 1; 
+  
+  var disqus_shortname = 'saadfarooq'; // required: replace example with your forum shortname
+  
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();</script><noscript>Please enable JavaScript to view the <a href=http://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=http://disqus.com class=dsq-brlink>blog comments powered by <span class=logo-disqus>Disqus</span></a></div></div><!-- footer.html --><footer><hr><!-- <p>
+ 	&copy; 2014 Saad Farooq.
+ </p>
+ <p>Made with Jekyll</p> --></footer><script src=/js/d41d.scripts.js></script><!-- footer.html end --></body></html></html>

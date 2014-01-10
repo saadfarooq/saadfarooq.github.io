@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: development | ]]></title>
+  <link href="/categories/development/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2014-01-10T01:31:03-05:00</updated>
+  <id>/</id>
+  <author>
+    <name><![CDATA[{"name"=>"Saad Farooq", "email"=>"sa@dfarooq.com", "github"=>"sfarooq", "twitter"=>"unimpeccable", "email_md5"=>"da46d3d12af35a4f70339ac6aba7f9c8"}]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Android Gradle Project Management]]></title>
+    <link href="/blog/development/2013/07/12/android-gradle-project-management"/>
+    <updated>2013-07-12T00:00:00-04:00</updated>
+    <id>/blog/development/2013/07/12/android-gradle-project-management</id>
+    <content type="html"><![CDATA[<h2>Basic Gradle Setup</h2>
+
+<p>Google decided to use Gradle is the build tool for Android recently and duely integrated the Gradle build system with Android Studio, the new IntelliJ IDEA based IDE.
+There is some great documentation about the new build system on <a href="http://tools.android.com/tech-docs/new-build-system/user-guide">here</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Loading Excel Files in Yii]]></title>
+    <link href="/blog/development/2013/07/08/loading-excel-files-in-yii"/>
+    <updated>2013-07-08T00:00:00-04:00</updated>
+    <id>/blog/development/2013/07/08/loading-excel-files-in-yii</id>
+    <content type="html"><![CDATA[<h1>Library to Use</h1>
+
+<p><a href="http://phpexcel.codeplex.com/">PHPExcel</a> is the most comprehensive Excel manipulation library for PHP. I has great features for reading and manipulating Excel (and related) files. </p>
+
+<p>I found a number of extensions written for Yii that claim to work. I didn&#39;t think any of them gave the complete array of features and some were just using PHPExcel in the background anyway.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[POST request from AngularJS with Yii]]></title>
+    <link href="/blog/development/2013/06/29/post-request-from-angularjs-with-yii"/>
+    <updated>2013-06-29T00:00:00-04:00</updated>
+    <id>/blog/development/2013/06/29/post-request-from-angularjs-with-yii</id>
+    <content type="html"><![CDATA[<p>I don&#39;t like Yii much. Maybe it&#39;s cause of the overbloatedness of PHP. </p>
+
+<p>AngularJS, which is what I&#39;m using in the front-end, allows you to send Javascript objects using POST requests via JSON. When you do that, you expect there to be a <code>$_POST</code> object in Yii from which you can conveniently partake of your desired data. </p>
+
+<p>After spending some time trying to figure out why that is so, I came upon <a href="http://learnyii.blogspot.com/2011/11/yii-json-post-model-save.html">this</a> post. It&#39;s annoying but basically you have to just do a low-level PHP read using.</p>
+
+<p><div class="highlight"><pre><code class="php"><span class="x">$post = file&lt;em&gt;get&lt;/em&gt;contents(&amp;quot;php://input&amp;quot;);</span>
+</code></pre></div></p>
+
+<p>Oh Yii !! How I hate thee...</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Image/Thumbnail Gallery with AngularJS]]></title>
+    <link href="/blog/development/2013/06/27/imagethumbnail-gallery-with-angularjs"/>
+    <updated>2013-06-27T00:00:00-04:00</updated>
+    <id>/blog/development/2013/06/27/imagethumbnail-gallery-with-angularjs</id>
+    <content type="html"><![CDATA[<p>I need to add a thumbnail gallery for the reports we provide on our online platform. Twitter Bootstrap has a great framework for setting this up quite easily using available CSS classes. </p>
+
+<p>For now, I&#39;m just going to use the default setup and use CSS3 animations to fade in and out the images based on what&#39;s being hovered over.</p>
+
+<p>This is what it looks like right now:</p>
+
+<p><div class="highlight"><pre><code class="css"><span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;row-fluid&quot;</span> <span class="nt">ng-controller</span><span class="o">=</span><span class="s2">&quot;ThumbnailsCtrl&quot;</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nt">ul</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;thumbnails&quot;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nt">li</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;span4&quot;</span> <span class="nt">ng-repeat</span><span class="o">=</span><span class="s2">&quot;report in reports&quot;</span><span class="o">&gt;</span>
+                <span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;thumbnail&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nt">img</span> <span class="nt">data-src</span><span class="o">=</span><span class="s2">&quot;holder.js/300x200&quot;</span> <span class="nt">alt</span><span class="o">=</span><span class="s2">&quot;300x200&quot;</span> <span class="nt">style</span><span class="o">=</span><span class="s2">&quot;width: 300px; height: 200px;&quot;</span><span class="o">&gt;</span>
+                    <span class="o">&lt;</span><span class="nt">div</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;caption&quot;</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="nt">h3</span><span class="o">&gt;&lt;/</span><span class="nt">h3</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+                        <span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;&lt;</span><span class="nt">a</span> <span class="nt">href</span><span class="o">=</span><span class="s2">&quot;#&quot;</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;btn btn-primary&quot;</span><span class="o">&gt;</span><span class="nt">Go</span> <span class="nt">To</span> <span class="nt">Report</span><span class="o">&lt;/</span><span class="nt">a</span><span class="o">&gt;</span>
+                    <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+                <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+            <span class="o">&lt;/</span><span class="nt">li</span><span class="o">&gt;</span>
+        <span class="o">&lt;/</span><span class="nt">ul</span><span class="o">&gt;</span>
+    <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span>
+</code></pre></div></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Server Side Pagination with ngTable]]></title>
+    <link href="/blog/development/2013/06/26/server-side-pagination-with-ngtable"/>
+    <updated>2013-06-26T00:00:00-04:00</updated>
+    <id>/blog/development/2013/06/26/server-side-pagination-with-ngtable</id>
+    <content type="html"><![CDATA[<h2>What is Server Side Pagination?</h2>
+
+<p>Sometimes you just have too much data to fit comfortably on a single page of a table or data-grid. There are two ways to deal with this. Client side pagination is when you get all the data from the server and use Javascript to show only some of it on the one page. Upon navigation to a different page, a new set of data is loaded.
+In server side pagination, only the amount of data to be shown on one page is loaded from the server. Upon navigation to a different page a new call is made to the server to get data for that page.</p>
+
+<h2>Server Side Pagination with ngTable</h2>
+
+<p>I chose ngTable as my standard table view. The reasons for this choice are detailed <a href="2013-06-23-data-grids-with-angularjs.html">elsewhere</a></p>
+
+<h2>Getting Totals</h2>
+
+<p>As explained <a href="http://www.arraystudio.com/as-workshop/mysql-get-total-number-of-rows-when-using-limit.html">here</a> getting the total values that &quot;would&quot; be returned is absolutely essential if you are going to have pagination.</p>
+]]></content>
+  </entry>
+  
+</feed>
