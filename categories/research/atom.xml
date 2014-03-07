@@ -4,7 +4,7 @@
   <title><![CDATA[Category: research | ]]></title>
   <link href="/categories/research/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2014-01-10T01:52:48-05:00</updated>
+  <updated>2014-03-06T19:50:07-05:00</updated>
   <id>/</id>
   <author>
     <name><![CDATA[{"name"=>"Saad Farooq", "email"=>"sa@dfarooq.com", "github"=>"sfarooq", "twitter"=>"unimpeccable", "email_md5"=>"da46d3d12af35a4f70339ac6aba7f9c8"}]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Response to "Developing New Notations for a Learnable Mathematics in the Computational Era"]]></title>
+    <link href="/blog/research/2014/01/13/response-to-learnable-mathematics-in-computational-era"/>
+    <updated>2014-01-13T00:00:00-05:00</updated>
+    <id>/blog/research/2014/01/13/response-to-learnable-mathematics-in-computational-era</id>
+    <content type="html"><![CDATA[<p><blockquote><p>&quot;...on the particularities and interconnectedness of the representational systems in which they are expressed&quot;</p><cite><a href="#Kaput02developingnew">(Kaput, Noss &#38; Hoyles, 2002)</a></cite></blockquote></p>
+
+<p>Around the time of the Islamic empire,</p>
+
+<p><blockquote><p>Computational skill became encoded in syntactically defined rules on a symbol system.</p><cite>(missing reference)</cite></blockquote></p>
+
+<h2>References</h2>
+
+<p><ol class="bibliography"><li><span id="Kaput02developingnew">Kaput, J., Noss, R., &#38; Hoyles, C. (2002). Developing new notations for a learnable mathematics in the computational era. In <i>In L. D. English (Ed.), Handbook of international research on mathematics education</i> (51–75). press.</span></li>
+<li>(missing reference)</li></ol></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Is Computer Science Really in Danger?]]></title>
@@ -32,7 +50,9 @@
 
 <h2>References:</h2>
 
-<p><ol class="bibliography"><li><span id="Rashid:2008:ICI:1364782.1364793">Rashid, R. (2008). Image Crisis: Inspiring a New Generation of Computer Scientists. <i>Commun. ACM</i>, <i>51</i>(7), 33–34. doi:10.1145/1364782.1364793</span></li></ol></p>
+<p><ol class="bibliography"><li><span id="Kaput02developingnew">Kaput, J., Noss, R., &#38; Hoyles, C. (2002). Developing new notations for a learnable mathematics in the computational era. In <i>In L. D. English (Ed.), Handbook of international research on mathematics education</i> (51–75). press.</span></li>
+<li>(missing reference)</li>
+<li><span id="Rashid:2008:ICI:1364782.1364793">Rashid, R. (2008). Image Crisis: Inspiring a New Generation of Computer Scientists. <i>Commun. ACM</i>, <i>51</i>(7), 33–34. doi:10.1145/1364782.1364793</span></li></ol></p>
 ]]></content>
   </entry>
   
@@ -57,7 +77,9 @@
 
 <h2>References</h2>
 
-<p><ol class="bibliography"><li><span id="Rashid:2008:ICI:1364782.1364793">Rashid, R. (2008). Image Crisis: Inspiring a New Generation of Computer Scientists. <i>Commun. ACM</i>, <i>51</i>(7), 33–34. doi:10.1145/1364782.1364793</span></li>
+<p><ol class="bibliography"><li><span id="Kaput02developingnew">Kaput, J., Noss, R., &#38; Hoyles, C. (2002). Developing new notations for a learnable mathematics in the computational era. In <i>In L. D. English (Ed.), Handbook of international research on mathematics education</i> (51–75). press.</span></li>
+<li>(missing reference)</li>
+<li><span id="Rashid:2008:ICI:1364782.1364793">Rashid, R. (2008). Image Crisis: Inspiring a New Generation of Computer Scientists. <i>Commun. ACM</i>, <i>51</i>(7), 33–34. doi:10.1145/1364782.1364793</span></li>
 <li><span id="denning2005recentering">Denning, P. J., &#38; McGettrick, A. (2005). Recentering computer science. <i>Communications of the ACM</i>, <i>48</i>(11), 15–19.</span></li></ol></p>
 ]]></content>
   </entry>
@@ -171,31 +193,6 @@ Keith Devlin                    : http://profkeithdevlin.com/</p>
 <p>David S Jenzen      : http://users.csc.calpoly.edu/~djanzen/
 Michael Kolling     : http://www.cs.kent.ac.uk/people/staff/mik/
 Michael Casperson   : http://cs.au.dk/~mec/</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Do we need variables?]]></title>
-    <link href="/blog/research/2013/07/31/do-we-need-variables"/>
-    <updated>2013-07-31T00:00:00-04:00</updated>
-    <id>/blog/research/2013/07/31/do-we-need-variables</id>
-    <content type="html"><![CDATA[<p>In my mission to reduce redunancy in the various concepts we are taught along the course of our education, one of my goals is to take out things we don&#39;t need from programming. Or more precisely, categorize things in terms of what are necessities and what are facilities.</p>
-
-<p>Which brings me to the topic of variables...</p>
-
-<p>While looking for research on the the use of programming in CS education, I ran across a paper called <a href="http://www.cs.kent.ac.uk/people/staff/dat/miranda/wadler87.pdf">&#39;Why calculating is better than scheming&#39;</a> by Philip Wadler. One of his other works is a programming langauge called <a href="http://groups.inf.ed.ac.uk/links/"><code>Links</code></a>. The language is <strong>&#39;designed to make web programming easier&#39;</strong>. The aim is to replace the myriad of languages used during standard web development (I use JS, HTML, PHP and MySQL in one of my projects) with a single one. The idea is novel and something that NodeJS aimed at by allowing web developers to use Javascript on both server and client.</p>
-
-<p>My own thougts when I read about this stack was; why do we need variables. How did I make the mental leap? Well, when you consider the most common usage of variables in programming, there are two main ones:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">- Pass values to functions
-- Store values in an common accessible location for later retrieval
-</code></pre></div>
-<p>Now, considering the concept of a <code>literacy of functional computation</code> (which I will elaborate in a separate post but basically it means that the unit of data is a function and values are a special case of function i.e. a function that always returns the same value); and combining it with the general pattern of web programming where a database is used for persistance of data, it may be possible to define a scheme where variables are not needed.</p>
-
-<p>For the two use cases defined above: if you are passing values to a function, just pass a function and if you need to persist data for a longer period or share it across various resources, save it the database.</p>
-
-<p>The success of this relies on the proof of the two claims; one, that all uses of variables fall into the two broad categories and two, that the concept of saving to a database if clearer in the minds of novice programmer than the concept of storing in memory.</p>
-
-<p>More on this as the story evolves...</p>
 ]]></content>
   </entry>
   
